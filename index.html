@@ -1782,6 +1782,13 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
 .offmsg .more{padding:0 2px}
 @media(max-width:899px){.book .eyebrow,.book__side .eyebrow{justify-content:center!important}}
 @media(max-width:400px){.modes{display:grid!important;grid-template-columns:.75fr 1.15fr 1.1fr;gap:8px}.modes .mode{padding:0 8px!important;font-size:15px!important;white-space:nowrap}}
+/* WebKit pass: the sign's last letter sits near the photo's right edge, so phones anchor the photo right and the push-in grows from that edge */
+@media(max-width:899px){.hero2 .walk__room{object-position:100% 42%!important;transform-origin:100% 45%!important}}
+/* WebKit pass: the phone Book/Call bar clears the home indicator (the page runs edge to edge with viewport-fit=cover) */
+@media(max-width:899px){.bar{padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))!important}}
+/* day chips: the last chip keeps an end gutter instead of stopping flush at the edge */
+.days::after{content:"";flex:0 0 14px}
+.days{scroll-padding-inline:0 14px!important}
 
 </style>
 <script>document.documentElement.classList.add('js')</script>
