@@ -131,7 +131,7 @@ body.inbook .bar{transform:translate(-50%,140%);opacity:0;pointer-events:none}
 .book .lede{margin:.7rem 0 0;color:#D6CFC3;max-width:46ch}
 .modes{display:flex;gap:6px;margin:22px 0 0;flex-wrap:wrap}
 .mode{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);font:500 .92rem/1 var(--sans)}
-.mode[aria-selected="true"]{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal)}
+.mode[aria-pressed="true"]{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal)}
 .mode--owner{margin-left:auto;border-style:dashed}
 .app{margin-top:18px;border-top:1px solid var(--ink);padding-top:14px;min-height:420px}
 .app[data-mode="owner"]{background:var(--charcoal);color:var(--ivory);border-radius:22px;padding:18px clamp(14px,3vw,26px) 22px;border:0;--line:rgba(248,243,239,.16);--muted:#b9aca8}
@@ -203,7 +203,7 @@ body.inbook .bar{transform:translate(-50%,140%);opacity:0;pointer-events:none}
 /* owner */
 .otabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 12px}
 .otab{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font:500 .9rem/1 var(--sans);color:var(--ivory)}
-.otab[aria-selected="true"]{background:var(--blush);color:var(--charcoal);border-color:var(--blush)}
+.otab[aria-pressed="true"]{background:var(--blush);color:var(--charcoal);border-color:var(--blush)}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0 14px}
 .kpi{border:1px solid var(--line);border-radius:16px;padding:12px}
 .kpi b{display:block;font:600 clamp(1.5rem,1.1rem + 2vw,2.2rem)/1 var(--serif);color:var(--blush)}
@@ -582,7 +582,7 @@ body.inbook .top .tbtn--staff{opacity:0;pointer-events:none}
 @media(max-width:430px){.top{gap:6px}.tbtn{padding:0 9px;font-size:.78rem}.brand b{font-size:1.15rem}.brand i{font-size:1.25rem}.brand{gap:7px}}
 .mode--owner{border-style:solid;border-color:var(--charcoal);background:var(--charcoal-2);color:var(--ivory);font-weight:600}
 .mode--owner::before{content:"";display:inline-block;width:11px;height:9px;border:1.6px solid currentColor;border-radius:2px;margin-right:8px;box-shadow:0 -6px 0 -3px var(--charcoal-2),0 -7px 0 -1.5px currentColor;vertical-align:-1px}
-.mode--owner[aria-selected="true"]{background:var(--charcoal);box-shadow:0 0 0 2px var(--champagne)}
+.mode--owner[aria-pressed="true"]{background:var(--charcoal);box-shadow:0 0 0 2px var(--champagne)}
 .shead{display:flex;align-items:center;gap:10px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .shead b{flex:1;font:600 1rem/1 var(--sans)}
 .slogin .tag{display:inline-block}
@@ -1174,7 +1174,7 @@ h1,h2,.sec h2,.book h2,.need h2,.tv h2,.app h3,.toy h2{font-family:var(--serif);
 .tcat[open] .tcat__chev{background:var(--ivory)!important}
 .tv__steps button[aria-pressed="true"] b{background:var(--charcoal)!important;color:var(--ivory)}
 .tv__steps button[aria-pressed="true"]{border-color:var(--charcoal);background:#fff}
-.mode[aria-selected="true"],.otab[aria-selected="true"],.chip[aria-pressed="true"]{background:var(--charcoal);color:var(--ivory)}
+.mode[aria-pressed="true"],.otab[aria-pressed="true"],.chip[aria-pressed="true"]{background:var(--charcoal);color:var(--ivory)}
 .stats b{color:var(--ivory)}
 /* ---------- the motif: the arch of their lit mirror ---------- */
 .tm img{border-radius:999px 999px 14px 14px!important;aspect-ratio:10/11}
@@ -1350,7 +1350,7 @@ body.past .brand,body.past .top .tbtn{opacity:1!important;visibility:visible!imp
 .mode{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important}
 .mode--owner{border-style:dashed!important}
 .mode--owner::before{border-color:currentColor}
-.mode[aria-selected="true"],.mode--owner[aria-selected="true"]{background:var(--ink)!important;color:var(--base)!important;border-color:var(--ink)!important;box-shadow:none!important}
+.mode[aria-pressed="true"],.mode--owner[aria-pressed="true"]{background:var(--ink)!important;color:var(--base)!important;border-color:var(--ink)!important;box-shadow:none!important}
 @media(max-width:380px){.book .mode--owner{display:none}}
 #app{background:var(--surf);border:1px solid var(--line);border-radius:2px;padding:20px clamp(14px,4vw,32px) 24px;margin-top:18px;color:var(--ink)}
 #app[data-mode="owner"]{background:var(--surf)!important;color:var(--ink)}
@@ -1386,7 +1386,7 @@ body.past .brand,body.past .top .tbtn{opacity:1!important;visibility:visible!imp
 .kpi b{color:var(--ink)!important;font-family:var(--serif)!important}
 .kpi span{color:#D6CFC3!important}
 .otab{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:2px!important}
-.otab[aria-selected="true"]{background:var(--accent)!important;color:var(--gold-ink)!important;border-color:var(--accent)!important}
+.otab[aria-pressed="true"]{background:var(--accent)!important;color:var(--gold-ink)!important;border-color:var(--accent)!important}
 .mini,.chip{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important}
 .chip[aria-pressed="true"]{background:var(--accent)!important;color:var(--gold-ink)!important}
 .cal__a,.appt{background:var(--surf2)!important;color:var(--ink)!important;border-color:var(--line)!important}
@@ -1683,8 +1683,8 @@ html.scrolled:not(.inhero) .top{background:var(--base)!important}
 /* 3 phone hero: the photo is the first screen (52svh, cover), its foot fades into the base and the headline's first line sits on it */
 @media(max-width:899px){
   .hero2 .walk__stage{padding:0!important;position:relative}
-  .hero2 .walk__room{aspect-ratio:auto!important;height:52svh!important;min-height:300px;object-fit:cover;object-position:72% 42%!important}
-  .hero2 .walk__stage::after{display:block!important;content:"";position:absolute;left:0;right:0;top:calc(52svh - 160px);height:160px;background:linear-gradient(180deg,rgba(14,21,18,0),var(--base))!important;z-index:1;pointer-events:none}
+  .hero2 .walk__room{aspect-ratio:auto!important;height:52vh!important;height:52svh!important;min-height:300px;object-fit:cover;object-position:72% 42%!important}
+  .hero2 .walk__stage::after{display:block!important;content:"";position:absolute;left:0;right:0;top:calc(52vh - 160px);top:calc(52svh - 160px);height:160px;background:linear-gradient(180deg,rgba(14,21,18,0),var(--base))!important;z-index:1;pointer-events:none}
   .hero2 .walk__stage::before{display:block!important;content:"";position:absolute;left:0;right:0;top:0;height:120px;background:linear-gradient(180deg,rgba(14,21,18,.6),transparent);z-index:1;pointer-events:none}
   .hero2 .walk__hero{position:relative;z-index:2;margin-top:-92px!important;background:none!important;padding:0 var(--edge) 28px!important}
   .hero2 .walk__hero .eyebrow{margin-bottom:10px}
@@ -1736,7 +1736,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
 }
 /* hero: a stronger fade behind the headline so it never sits on the busy part of the photo */
 @media(max-width:899px){
-  .hero2 .walk__stage::after{top:calc(52svh - 248px)!important;height:264px!important;background:linear-gradient(180deg,rgba(14,21,18,0) 0%,rgba(14,21,18,.5) 30%,rgba(14,21,18,.86) 56%,var(--base) 88%,var(--base) 100%)!important}
+  .hero2 .walk__stage::after{top:calc(52vh - 248px)!important;top:calc(52svh - 248px)!important;height:264px!important;background:linear-gradient(180deg,rgba(14,21,18,0) 0%,rgba(14,21,18,.5) 30%,rgba(14,21,18,.86) 56%,var(--base) 88%,var(--base) 100%)!important}
   .hero2 .walk__hero{margin-top:-80px!important}
 }
 /* 2 section labels: no watermark diamond; one small diamond, number, label and hairline in a simple centred row */
@@ -1789,6 +1789,24 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
 /* day chips: the last chip keeps an end gutter instead of stopping flush at the edge */
 .days::after{content:"";flex:0 0 14px}
 .days{scroll-padding-inline:0 14px!important}
+
+/* ---- audit fix 15 Nov (AUDIT-FIX-2026-11-15.md) ---- */
+/* B1: appointments booked in the demo were dark text on a dark card (1.26:1); samples and time off keep their own look */
+.ac:not(.is-s):not(.ac--off){background:var(--surf2);color:var(--ink);border:1px solid rgba(201,161,90,.6)}
+/* design 4: the patch-test note is one short line, a tick box and a disclosure */
+.note--pt .first-visit{margin:8px 0 2px}
+.ptmore{margin-top:6px}
+.ptmore summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--ink);text-decoration:underline;text-underline-offset:3px;-webkit-tap-highlight-color:transparent}
+.ptmore summary:active{opacity:.75}
+.ptmore p{margin:2px 0 6px}
+.calw .wk-mv{display:block;color:var(--palegold);font-weight:600}
+@media(max-width:899px){
+  /* design 1: shorter pauses between sections on phones (desktop keeps 176/184) */
+  .sec,.book{padding-top:64px!important;padding-bottom:72px!important}
+  /* design 2: the two hero actions share one row when they fit (430/393/390), stack full width on narrower screens */
+  .hero2 .walk__hero .actions{flex-wrap:wrap;gap:10px}
+  .hero2 .walk__hero .actions .btn{flex:1 1 auto;padding:0 18px!important;letter-spacing:.08em!important;white-space:nowrap}
+}
 
 </style>
 <script>document.documentElement.classList.add('js')</script>
@@ -1874,10 +1892,10 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       <h2 id="book-h">Ready to <em>book</em>?</h2>
       <p class="lede">Choose your treatment and practitioner, and pick a time that suits you.</p>
     </div>
-    <div class="modes" role="tablist" aria-label="Booking">
-      <button class="mode" role="tab" type="button" data-mode="book" aria-selected="true">Book</button>
-      <button class="mode" role="tab" type="button" data-mode="mine" aria-selected="false">My bookings</button>
-      <button class="mode mode--owner" role="tab" type="button" data-mode="owner" aria-selected="false">Staff login</button>
+    <div class="modes" role="group" aria-label="Booking">
+      <button class="mode" type="button" data-mode="book" aria-pressed="true">Book</button>
+      <button class="mode" type="button" data-mode="mine" aria-pressed="false">My bookings</button>
+      <button class="mode mode--owner" type="button" data-mode="owner" aria-pressed="false">Staff login</button>
     </div>
     <p class="small demo">Demo booking: nothing is sent to the salon yet. What you enter stays in this browser only.</p>
     </div>
@@ -2023,10 +2041,11 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   var img = D.getElementById('walkRoom'), fine = false;
   try { fine = matchMedia('(pointer: fine) and (min-width: 900px)').matches; } catch (e) { }
   if (img && fine) {
-    var q = 0;
+    var q = 0, last = '', MQ = null; try { MQ = matchMedia('(prefers-reduced-motion: reduce)'); } catch (e) { }
     addEventListener('scroll', function () {
-      if (q) return; q = requestAnimationFrame(function () { q = 0; var y = Math.min(20, (window.pageYOffset || 0) * 0.04); img.style.translate = '0 ' + y.toFixed(1) + 'px'; });
+      if (q) return; q = requestAnimationFrame(function () { q = 0; var y = MQ && MQ.matches ? '0.0' : Math.min(20, (window.pageYOffset || 0) * 0.04).toFixed(1); if (y !== last) { last = y; img.style.translate = '0 ' + y + 'px'; } });   // audit S13: Reduce Motion turned on mid-visit stops the drift
     }, { passive: true });
+    if (MQ) { var calm = function (e) { if (e.matches) { last = '0.0'; img.style.translate = '0 0.0px'; } }; if (MQ.addEventListener) MQ.addEventListener('change', calm); else if (MQ.addListener) MQ.addListener(calm); }   // fix2 S13: reset at once, not on the next scroll
   }
 })();
 
@@ -2136,7 +2155,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   /* d3b: every public Book link lands on the first choice of the booking (not on the section heading) */
   D.addEventListener('click', function (e) {
     var a = e.target.closest('a[href="#book"]'); if (!a || a.hasAttribute('data-staff-login') || !RLR.toFirst) return;
-    e.preventDefault(); var t = $('.mode[data-mode="book"]'); if (t && t.getAttribute('aria-selected') !== 'true') t.click(); setTimeout(RLR.toFirst, 30);
+    e.preventDefault(); var t = $('.mode[data-mode="book"]'); if (t && t.getAttribute('aria-pressed') !== 'true') t.click(); setTimeout(RLR.toFirst, 30);
   });
   D.addEventListener('click', function (e) { var s = e.target.closest('[data-staff-login]'); if (s && RLR.staffLogin) { e.preventDefault(); RLR.staffLogin(); } });
 
@@ -2318,7 +2337,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   var $$ = function (s, r) { return Array.prototype.slice.call((r || D).querySelectorAll(s)); };
   var app = $('#app'); if (!app) return;
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
-  var cap = function (s) { return s.replace(/(^|[\s(\-\/])([a-z])/g, function (m, a, b) { return a + b.toUpperCase(); }); };
+  var cap = function (s) { return s.replace(/(^|[\s(\-\/])([a-z])/g, function (m, a, b) { return a + b.toUpperCase(); }).replace(/(\S )(And|Or|Of|With|Up)\b/g, function (m, a, b) { return a + b.toLowerCase(); }); };   // audit N8: same joining-word rule as sections.py
 
   /* ---------- menu (from RLR's Timely page, 13 Nov 2026) ---------- */
   var STAFF = ["Rachael", "Paige", "Holly", "James", "Mischa", "Abbie", "Louise"];
@@ -2342,7 +2361,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   RAW.forEach(function (c) {
     var g = GROUPS.filter(function (x) { return x.cats.indexOf(c.c) >= 0; })[0];
     c.s.forEach(function (r) {
-      var s = { id: r[0], name: cap(r[1]), mins: r[2], price: r[3], staff: r[4].map(function (i) { return STAFF[i]; }), desc: r[5] || '', cat: c.c, grp: g ? g.slug : 'consultations' };
+      var s = { id: r[0], name: cap(r[1]), mins: r[2], price: r[3], staff: r[4].map(function (i) { return STAFF[i]; }), desc: (r[0] === '5291515' || r[0] === '5442816') ? '' : (r[5] || ''), cat: c.c, grp: g ? g.slug : 'consultations' };
       var m = /£\s*([\d.]+)/.exec(s.price); s.num = m ? parseFloat(m[1]) : 0;
       SV.push(s); BYID[s.id] = s;
     });
@@ -2364,33 +2383,135 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   var MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], MOL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var dlong = function (k) { var d = dparse(k); return WDL[d.getDay()] + ' ' + d.getDate() + ' ' + MOL[d.getMonth()]; };
   var dshort = function (k) { var d = dparse(k); return WD[d.getDay()] + ' ' + d.getDate() + ' ' + MO[d.getMonth()]; };
+  var LONDON = null; try { LONDON = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }); } catch (e) { }   // audit S14: one formatter
+  function londonParts(t) { var g = {}; LONDON.formatToParts(new Date(t)).forEach(function (x) { g[x.type] = x.value; }); return g; }
+  function londonDay(t) { if (!LONDON) { var n = new Date(t == null ? Date.now() : t); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); } var g = londonParts(t == null ? Date.now() : t); return new Date(+g.year, +g.month - 1, +g.day); }   // audit S15: "today" = London's calendar day on any device
+  var todayKey = function () { return dkey(londonDay()); };
   var stamp = function (k, m) { return londonUTC(k, m).getTime(); };   // audit S4: London wall time -> instant, whatever the device zone
   var durtxt = function (m) { var h = Math.floor(m / 60), r = m % 60; return (h ? h + (h > 1 ? ' hours' : ' hour') : '') + (h && r ? ', ' : '') + (r ? r + ' mins' : ''); };
+  function pkey(p) { return String(p == null ? '' : p).replace(/[^\d+]/g, '').replace(/^(?:\+|00)44/, '0').replace(/^00(?=\d{10}$)/, '0'); }   // audit S16: one client key per mobile (07..., +44 7..., +44 (0)7...)
+  function mobileErr(raw) {
+    if (/[^\d\s()+\-.]/.test(raw)) return 'Please use only numbers in your mobile number, for example 07700 900123.';
+    var k = pkey(raw);
+    if (/^07\d{9}$/.test(k)) return '';
+    if (/^0[1-35689]\d{8,9}$/.test(k)) return 'That looks like a landline. Please add a UK mobile number starting 07, for example 07700 900123.';
+    return 'Please add a UK mobile number, for example 07700 900123.';
+  }
+  var pfmt = function (k) { return k.slice(0, 5) + ' ' + k.slice(5); };
   var isOpen = function (k) { return HOURS.days.indexOf(dparse(k).getDay()) >= 0; };
 
   /* ---------- data layer ---------- */
-  var KEY = 'rlr-beauty-demo-v1', mem = null;
-  var blank = function () { return { bookings: [], enquiries: [], notes: {}, marks: {} }; };
-  function read() { if (mem) return mem; try { mem = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { mem = null; } if (!mem || typeof mem !== 'object' || !Array.isArray(mem.bookings)) mem = blank();
-    if (!Array.isArray(mem.enquiries)) mem.enquiries = []; if (!mem.notes || typeof mem.notes !== 'object' || Array.isArray(mem.notes)) mem.notes = {}; if (!mem.marks || typeof mem.marks !== 'object' || Array.isArray(mem.marks)) mem.marks = {};
-    mem.bookings = mem.bookings.filter(function (b) { return b && typeof b === 'object' && typeof b.date === 'string' && typeof b.time === 'number' && b.sid; });
-    return mem; }
-  function write() { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch (e) { /* private mode: stays in memory */ } }
+  /* audit B2/S1/S2 (15 Nov): every change re-reads the latest saved copy and writes it back in one step (inside a Web Lock where the
+     browser has them), so two open tabs no longer overwrite each other; other tabs refresh on the storage event. Saved records are
+     checked before use: anything unreadable is kept aside under "bad" (never deleted) and a notice says so. If the browser will not
+     save, the change stays in memory for this visit and the demo notice says so instead of claiming it was saved. */
+  var KEY = 'rlr-beauty-demo-v1', mem = null, durable = true, badCount = 0;
+  var blank = function () { return { bookings: [], enquiries: [], notes: {}, marks: {}, bad: [] }; };
+  var isObj = function (x) { return !!x && typeof x === 'object' && !Array.isArray(x); };
+  var isStr = function (x) { return typeof x === 'string'; };
+  var okDay = function (k) { if (!isStr(k) || !/^\d{4}-\d{2}-\d{2}$/.test(k)) return false; var d = dparse(k); return dkey(d) === k; };
+  var okMin = function (m) { return typeof m === 'number' && isFinite(m) && m >= 0 && m < 1440 && m % 1 === 0; };   // fix2 S1: a time of day, 00:00-23:59
+  function okBooking(b) {
+    return isObj(b) && isStr(b.id) && b.id && isStr(b.sid) && !!BYID[b.sid] && STAFF.indexOf(b.staff) >= 0 && okDay(b.date) && okMin(b.time) &&
+      typeof b.dur === 'number' && b.dur > 0 && b.dur <= 720 && b.dur % 1 === 0 && isStr(b.name) && isStr(b.phone) && (b.status === 'booked' || b.status === 'cancelled') &&
+      (b.patch == null || (isObj(b.patch) && okDay(b.patch.date) && okMin(b.patch.time) && STAFF.indexOf(b.patch.staff) >= 0)) &&
+      (b.ref == null || isStr(b.ref)) && (b.notes == null || isStr(b.notes)) && (b.email == null || isStr(b.email));
+  }
+  function okBlock(x) { return isObj(x) && okDay(x.d) && typeof x.a === 'number' && typeof x.b === 'number' && x.b > x.a; }
+  function okEnquiry(e) { return isObj(e) && isStr(e.id) && isStr(e.name) && isStr(e.contact) && isStr(e.kind) && (e.msg == null || isStr(e.msg)) && (e.at == null || typeof e.at === 'number'); }
+  function norm(x) {                                  // split saved data into usable records and records kept aside
+    var d = blank(); if (!isObj(x)) { if (x != null) d.bad.push({ raw: x }); return d; }
+    if (Array.isArray(x.bad)) d.bad = x.bad.slice(); else if (x.bad != null) d.bad.push({ kind: 'bad', raw: x.bad });
+    ['bookings', 'enquiries'].forEach(function (n) { if (x[n] != null && !Array.isArray(x[n])) d.bad.push({ kind: n, raw: x[n] }); });   // fix2 S1: an unusable container is kept aside, not dropped
+    ['notes', 'marks'].forEach(function (n) { if (x[n] != null && !isObj(x[n])) d.bad.push({ kind: n, raw: x[n] }); });
+    (Array.isArray(x.bookings) ? x.bookings : []).forEach(function (b) { if (okBooking(b)) d.bookings.push(b); else d.bad.push({ kind: 'booking', raw: b }); });
+    (Array.isArray(x.enquiries) ? x.enquiries : []).forEach(function (e) { if (okEnquiry(e)) d.enquiries.push(e); else d.bad.push({ kind: 'enquiry', raw: e }); });
+    if (isObj(x.notes)) Object.keys(x.notes).forEach(function (k) { if (isStr(x.notes[k])) d.notes[k] = x.notes[k]; else d.bad.push({ kind: 'note', key: k, raw: x.notes[k] }); });
+    if (isObj(x.marks)) Object.keys(x.marks).forEach(function (k) { var v = x.marks[k]; if (v === 'arrived' || v === 'noshow' || v === 'done') d.marks[k] = v; else d.bad.push({ kind: 'mark', key: k, raw: v }); });
+    Object.keys(d.notes).forEach(function (k) {     // audit S16: one key per mobile. fix2: both texts are kept when two old keys are the same number;
+      if (!/^\+?\d{10,13}$/.test(k)) return;        // the old key goes only in the same write that stores the combined note
+      var nk = pkey(k), t = d.notes[k], have = d.notes[nk]; if (nk === k) return;
+      d.notes[nk] = !have || have === t ? t : !t || have.indexOf(t) >= 0 ? have : have + '\n\n' + t; delete d.notes[k];
+    });
+    return d;
+  }
+  function read() {                                   // always the latest saved copy (memory only when this browser cannot save)
+    if (!durable && mem) return mem;
+    var raw = null, parsed = null;
+    try { raw = localStorage.getItem(KEY); } catch (e) { durable = false; storageNotice(); return mem || (mem = blank()); }
+    if (raw) { try { parsed = JSON.parse(raw); } catch (e) { parsed = { bookings: [], bad: [{ kind: 'unreadable', raw: raw }] }; } }
+    mem = norm(parsed); badCount = mem.bad.length;
+    return mem;
+  }
+  function save(d) {
+    if (!durable) return false;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); return true; } catch (e) { durable = false; storageNotice(); return false; }
+  }
+  function storageNotice() {                          // audit S2: say plainly that changes are not being kept
+    var n = $('#book .demo');
+    if (n) { n.textContent = 'This browser is not saving the demo. Changes last only while this page stays open; earlier saved demo data may come back after a reload.'; n.setAttribute('role', 'status'); }
+  }
+  function change(fn) {                               // read the latest copy, change it, write it back: one step per change
+    return locked(function () { var d = read(), r = fn(d); save(d); return r; });
+  }
+  function locked(run) {                             // fix2 B2: run one step inside the Web Lock; keep the lock 250 ms after it so the write
+    try {                                            // reaches the other tabs before any of them reads under the lock
+      if (navigator.locks && navigator.locks.request) return new Promise(function (res, rej) {
+        navigator.locks.request('rlr-beauty-demo', function () { try { res(run()); } catch (e) { rej(e); } return new Promise(function (r) { setTimeout(r, 250); }); }).catch(rej);
+      });
+    } catch (e) { }
+    return Promise.resolve().then(run);
+  }
+  var byId = function (list, id) { return list.filter(function (x) { return x.id === id; })[0]; };
   var DB = {
     listBookings: function () { return Promise.resolve(read().bookings.slice()); },
-    addBooking: function (b) { read().bookings.push(b); write(); return Promise.resolve(b); },
-    patchBooking: function (id, p) { var b = read().bookings.filter(function (x) { return x.id === id; })[0]; if (b) { for (var k in p) b[k] = p[k]; write(); } return Promise.resolve(b); },
+    addBooking: function (b) { return change(function (d) { d.bookings.push(b); return b; }); },
+    patchBooking: function (id, p) { return change(function (d) { var b = byId(d.bookings, id); if (b) for (var k in p) b[k] = p[k]; return b; }); },
     listEnquiries: function () { return Promise.resolve(read().enquiries.slice()); },
-    addEnquiry: function (e) { read().enquiries.push(e); write(); return Promise.resolve(e); },
-    patchEnquiry: function (id, p) { var e = read().enquiries.filter(function (x) { return x.id === id; })[0]; if (e) { for (var k in p) e[k] = p[k]; write(); } return Promise.resolve(e); },
+    addEnquiry: function (e) { return change(function (d) { d.enquiries.push(e); return e; }); },
+    patchEnquiry: function (id, p) { return change(function (d) { var e = byId(d.enquiries, id); if (e) for (var k in p) e[k] = p[k]; return e; }); },
     getNotes: function () { return Promise.resolve(read().notes); },
-    setNote: function (k, t) { read().notes[k] = t; write(); return Promise.resolve(); },
+    setNote: function (k, t) { return change(function (d) { d.notes[k] = t; }); },
     getMarks: function () { return Promise.resolve(read().marks); },
-    setMark: function (id, s) { if (s) read().marks[id] = s; else delete read().marks[id]; write(); return Promise.resolve(); },
-    reset: function () { mem = blank(); try { localStorage.removeItem(KEY); } catch (e) { } return Promise.resolve(); }
+    setMark: function (id, s) { return change(function (d) { if (s) d.marks[id] = s; else delete d.marks[id]; }); },
+    reset: function () {
+      var run = function () { mem = blank(); badCount = 0; var ok = durable; try { localStorage.removeItem(KEY); } catch (e) { ok = false; durable = false; storageNotice(); } return ok; };
+      return locked(run);   // fix2 B2: reset waits for the same lock
+    },
+    editBlocks: function (who, fn) {               // fix2 B2: read, change and write one person's time off on the latest saved copy, in one locked step
+      return change(function (d) {
+        var k = 'block:' + who, raw = d.notes[k], all = null; try { all = raw ? JSON.parse(raw) : []; } catch (e) { }
+        if (!Array.isArray(all)) { d.bad.push({ kind: 'note', key: k, raw: raw }); all = []; }   // unreadable time off is kept aside, not overwritten silently
+        all.forEach(function (x) { if (!okBlock(x)) d.bad.push({ kind: 'block', key: k, raw: x }); });
+        var r = fn(all.filter(okBlock)); d.notes[k] = JSON.stringify(r.list); badCount = d.bad.length; return r.out;
+      });
+    },
+    saving: function () { return durable; }
   };
   RLR.DB = DB;
   var C = { bookings: [], enquiries: [], notes: {}, marks: {} };          // render cache
+  var stale = false;
+  function overlayOpen() {                          // fix2: a sheet, the viewer, a form or a focused field is open: do not rebuild under it
+    var a = D.activeElement;
+    return !!SH || D.documentElement.classList.contains('tv-open') || !!$('form', app) || !!(a && app.contains(a) && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName));
+  }
+  function catchUp() {                              // another tab changed the demo: rebuild now if nothing is open, keeping the focused control
+    if (!stale || overlayOpen()) return;
+    var a = D.activeElement, inApp = a && app.contains(a), act = inApp && a.getAttribute('data-act'), id = inApp && a.getAttribute('data-id');
+    keepScroll(function () {
+      render(false);
+      var el = act === 'day' && $('[data-act="day"][data-id="' + id + '"]', app);   // fix3 S10: that day is now unavailable: focus the newly selected day
+      if (act === 'day' && (!el || el.disabled)) { if (B.date) id = B.date; else act = 'none'; }
+      if (act) focusAct(act, id); else if (inApp) focusAct('none');
+    });
+  }
+  RLR.catchUp = catchUp;                           // the viewer calls this when it closes
+  addEventListener('storage', function (e) {
+    if (e.key !== KEY && e.key !== null) return;
+    refresh().then(function () { stale = true; catchUp(); });
+  });
+  app.addEventListener('focusout', function () { if (stale) setTimeout(catchUp, 0); });
+  function badNote() { return badCount ? '<p class="note" role="status">' + badCount + (badCount === 1 ? ' saved demo entry' : ' saved demo entries') + ' in this browser could not be read. ' + (badCount === 1 ? 'It is' : 'They are') + ' kept aside, not deleted; Reset demo clears them.</p>' : ''; }
   function refresh() { return Promise.all([DB.listBookings(), DB.listEnquiries(), DB.getNotes(), DB.getMarks()]).then(function (r) { C.bookings = r[0]; C.enquiries = r[1]; C.notes = r[2]; C.marks = r[3]; }); }
 
   /* ---------- sample diary (clearly labelled; lets the diary and the taken slots feel real) ---------- */
@@ -2438,7 +2559,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     return out;
   }
   function earliestPatch() {                            /* the first patch-test slot that can really be booked (open day, 1 h notice, free) */
-    var ps = BYID[PATCH_ID], who = B.who === 'any' ? null : B.who, cands = who && ps.staff.indexOf(who) >= 0 ? [who] : ps.staff, today = new Date();
+    var ps = BYID[PATCH_ID], who = B.who === 'any' ? null : B.who, cands = who && ps.staff.indexOf(who) >= 0 ? [who] : ps.staff, today = londonDay();
     for (var i = 0; i < DAYS_AHEAD; i++) {
       var k = dkey(addDays(today, i)); if (!isOpen(k)) continue;
       for (var t = HOURS.open; t + 5 <= HOURS.close; t += 30) { var st = stamp(k, t); if (st < Date.now() + 3600e3) continue; if (cands.some(function (c) { return freeFor(k, c, t, 5); })) return st; }
@@ -2450,7 +2571,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   function patchCands(c) { var ps = BYID[PATCH_ID]; return ps.staff.indexOf(c) >= 0 ? [c] : ps.staff; }
   function firstPatchFor(c) {                           /* earliest bookable patch-test instant for this practitioner (memo per render) */
     var cs = patchCands(c), key = cs.join(','); if (PMEMO[key] !== undefined) return PMEMO[key];
-    var today = new Date(), r = Infinity;
+    var today = londonDay(), r = Infinity;
     outer: for (var i = 0; i < DAYS_AHEAD; i++) { var k = dkey(addDays(today, i)); if (!isOpen(k)) continue;
       for (var t = HOURS.open; t + 5 <= HOURS.close; t += 30) { var st = stamp(k, t); if (st < Date.now() + 3600e3) continue; if (cs.some(function (x) { return freeFor(k, x, t, 5); })) { r = st; break outer; } } }
     return (PMEMO[key] = r);
@@ -2460,8 +2581,10 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     return out.map(function (x) { var st = stamp(k, x.t), fr = x.staff.filter(function (c) { return firstPatchFor(c) + PATCH_HOURS * 3600e3 <= st; }); return { t: x.t, staff: fr, ok: fr.length > 0 }; });
   }
   function minStampFor(patch) { return patch ? earliestPatch() + PATCH_HOURS * 3600e3 : Date.now() + 3600e3; }
+  function movingPatch() { var m = B.moving && C.bookings.filter(function (b) { return b.id === B.moving; })[0]; return m && m.patch && m.status !== 'cancelled' ? m.patch : null; }
+  function minNow() { var m = minStampFor(B.patch && !B.moving), mp = movingPatch(); return mp ? Math.max(m, stamp(mp.date, mp.time) + PATCH_HOURS * 3600e3) : m; }   // audit S5: a move keeps its patch test, so 48 h after it
   function nextFree(s, who, patch) {
-    var today = new Date(), min = minStampFor(patch);
+    var today = londonDay(), min = minStampFor(patch);
     for (var i = 0; i < DAYS_AHEAD; i++) { var k = dkey(addDays(today, i)); var f = slots(s, who, k, min).filter(function (x) { return x.ok; })[0]; if (f) return { k: k, t: f.t }; }
     return null;
   }
@@ -2564,20 +2687,24 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       });
       h += '</ul>';
     } else if (B.step === 'when') {
-      var min = minStampFor(B.patch), today = new Date();
+      var min = minNow(), today = londonDay(), mp = movingPatch();
       h += backBtn + crumbs() + head(B.moving ? 'Pick a new time' : 'Pick a time', durtxt(s.mins) + ' · ' + price(s), s.grp);
-      if (needsPatchRule(s)) h += '<div class="note"><b>Patch test.</b> New clients must have a patch test at least 48 hours before a tint treatment. You also need one after a change in medical health or a 6 month gap.<label class="check"><input type="checkbox" data-act="patch"' + (B.patch ? ' checked' : '') + '><span>That&#39;s me: add a free 5 minute patch test and only show times 48 hours or more after it.</span></label></div>';
-      if (B.err) h += '<p class="err" role="alert">' + esc(B.err) + '</p>';
-      if (B.patch && !B.moving) { var e1 = new Date(min); h += '<p class="note first-visit">First visit: your earliest appointment is <b>' + dlong(dkey(e1)) + '</b> so the patch test can be done 48 hours before.</p>'; }
-      h += '<div class="days" role="group" aria-label="Day">';
-      var first = null;
+      var days = '', first = null;
       for (var i = 0; i < DAYS_AHEAD; i++) {
         var d = addDays(today, i), k = dkey(d), sl = slotsP(s, B.who, k, min, B.moving), free = sl.filter(function (x) { return x.ok; }).length;
         if (free && !first) first = k;
-        h += '<button class="day" type="button" data-act="day" data-id="' + k + '"' + (free ? '' : ' disabled') + ' aria-pressed="' + (B.date === k) + '" aria-label="' + dlong(k) + (free ? ', ' + free + ' times' : !isOpen(k) ? ', closed' : (B.patch && !B.moving && stamp(k, HOURS.close) < min) ? ', too soon after the patch test' : ', full') + '"><small>' + (i === 0 ? 'Today' : WD[d.getDay()]) + '</small><b>' + d.getDate() + '</b><em>' + (free ? MO[d.getMonth()] : !isOpen(k) ? 'Closed' : (B.patch && !B.moving && stamp(k, HOURS.close) < min) ? 'Too soon' : 'Full') + '</em></button>';
+        var why = free ? '' : !isOpen(k) ? 'Closed' : (B.patch && !B.moving && slots(s, B.who, k, Date.now() + 3600e3, B.moving).some(function (x) { return x.ok; })) ? 'Too soon' : 'Full';   // audit S3: "Too soon" only when ordinary times exist that the patch test rules out
+        days += '<button class="day" type="button" data-act="day" data-id="' + k + '"' + (free ? '' : ' disabled') + ' aria-pressed="' + (B.date === k) + '" aria-label="' + dlong(k) + (free ? ', ' + free + ' times' : why === 'Too soon' ? ', too soon after the patch test' : ', ' + why.toLowerCase()) + '"><small>' + (i === 0 ? 'Today' : WD[d.getDay()]) + '</small><b>' + d.getDate() + '</b><em>' + (free ? MO[d.getMonth()] : why) + '</em></button>';
       }
+      if (needsPatchRule(s) && !B.moving) h += '<div class="note note--pt"><b>Patch test.</b> New clients need one at least 48 hours before a tint treatment.' +   // design 4: one short line, full rule one tap away
+        '<label class="check"><input type="checkbox" data-act="patch"' + (B.patch ? ' checked' : '') + '><span>That&#39;s me: add a free 5 minute patch test and only show times 48 hours or more after it.</span></label>' +
+        (B.patch && first ? '<p class="first-visit">Earliest available: <b>' + dlong(first) + '</b>.</p>' : '') +
+        '<details class="ptmore"><summary>When else is a patch test needed?</summary><p>New clients must have a patch test at least 48 hours before a tint treatment. You also need one after a change in medical health or a 6 month gap.</p></details></div>';
+      if (mp) h += '<p class="note">Your patch test stays on ' + dshort(mp.date) + ', ' + tfmt(mp.time) + ', so new times start 48 hours after it.</p>';
+      if (B.err) h += '<p class="err" role="alert">' + esc(B.err) + '</p>';
+      h += '<div class="days" role="group" aria-label="Day">' + days;
       h += '</div>';
-      if (!B.date || !slotsP(s, B.who, B.date, min, B.moving).some(function (x) { return x.ok; })) { B.date = first; B.time = null; h = h.replace('data-id="' + first + '" aria-pressed="false"', 'data-id="' + first + '" aria-pressed="true"'); }
+      if (!B.date || !slotsP(s, B.who, B.date, min, B.moving).some(function (x) { return x.ok; })) { if (B.date) h = h.replace('data-id="' + B.date + '" disabled aria-pressed="true"', 'data-id="' + B.date + '" disabled aria-pressed="false"'); /* fix3 S10: the day that became unavailable is no longer marked chosen */ B.date = first; B.time = null; h = h.replace('data-id="' + first + '" aria-pressed="false"', 'data-id="' + first + '" aria-pressed="true"'); }
       if (!B.date) h += '<p class="sub">No free times in the next 4 weeks for this choice. Try another practitioner, or call 07809 236386.</p>';
       else {
         var all = slotsP(s, B.who, B.date, min, B.moving), am = all.filter(function (x) { return x.t < 720; }), pm = all.filter(function (x) { return x.t >= 720; });
@@ -2613,7 +2740,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function pickStaff() { var s = svc(), sl = slotsP(s, 'any', B.date, 0, B.moving).filter(function (x) { return x.t === B.time; })[0]; if (!sl || !sl.staff.length) return s.staff[0]; var best = sl.staff[0], bn = 1e9; sl.staff.forEach(function (st) { var n = busy(B.date, st).length; if (n < bn) { bn = n; best = st; } }); return best; }
   function patchOptions() {
-    var ps = BYID[PATCH_ID], who = B.who === 'any' ? pickStaff() : B.who, cands = ps.staff.indexOf(who) >= 0 ? [who] : ps.staff, latest = stamp(B.date, B.time) - PATCH_HOURS * 3600e3, out = [], today = new Date();
+    var ps = BYID[PATCH_ID], who = B.who === 'any' ? pickStaff() : B.who, cands = ps.staff.indexOf(who) >= 0 ? [who] : ps.staff, latest = stamp(B.date, B.time) - PATCH_HOURS * 3600e3, out = [], today = londonDay();
     for (var i = 0; i < DAYS_AHEAD && out.length < 8; i++) {
       var k = dkey(addDays(today, i)); if (!isOpen(k)) continue;
       for (var t = HOURS.open; t + 5 <= HOURS.close && out.length < 8; t += 30) {
@@ -2637,26 +2764,16 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       'SUMMARY:' + s.name + ' at RLR Beauty', 'LOCATION:109a Worcester Road\\, Droitwich Spa\\, WR9 8AR', 'DESCRIPTION:With ' + b.staff + '. Ref ' + b.ref + '. Call 07809 236386 to change.',
       'BEGIN:VALARM', 'TRIGGER:-PT24H', 'ACTION:DISPLAY', 'DESCRIPTION:RLR Beauty tomorrow', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
   }
-  /* Google Calendar "add event" link (the demo viewer blocks file downloads, so no .ics download): London wall time -> UTC */
+  /* London wall time -> UTC instant (any device zone) */
   function londonUTC(k, m) {
     var p = k.split('-'), want = Date.UTC(+p[0], +p[1] - 1, +p[2], Math.floor(m / 60), m % 60), guess = want;
     try {
       for (var i = 0; i < 2; i++) {
-        var g = {};
-        new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
-          .formatToParts(new Date(guess)).forEach(function (x) { g[x.type] = x.value; });
+        var g = londonParts(guess);
         guess += want - Date.UTC(+g.year, +g.month - 1, +g.day, +g.hour, +g.minute);
       }
     } catch (e) { }
     return new Date(guess);
-  }
-  function gcal(b) {
-    var s = BYID[b.sid], f = function (d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
-    return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-      '&text=' + encodeURIComponent(s.name + ' at RLR Beauty') +
-      '&dates=' + f(londonUTC(b.date, b.time)) + '/' + f(londonUTC(b.date, b.time + b.dur)) +
-      '&details=' + encodeURIComponent('With ' + b.staff + '. Ref ' + b.ref + '. Call 07809 236386 to change.') +
-      '&location=' + encodeURIComponent('109a Worcester Road, Droitwich Spa, WR9 8AR');
   }
   function ticket(b, fresh) {
     var s = BYID[b.sid], when = stamp(b.date, b.time), past = when < Date.now(), within = when - Date.now() < CHANGE_HOURS * 3600e3, cancelled = b.status === 'cancelled';
@@ -2669,9 +2786,10 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       '<li><span>Where</span><span>109a Worcester Road, Droitwich Spa, WR9 8AR</span></li>' + (b.notes ? '<li><span>Notes</span><span>' + esc(b.notes) + '</span></li>' : '') + '</ul>';
     if (!cancelled && !past) {
       if (fresh) h += '<div class="sms"><p>Hi ' + esc(b.name.split(' ')[0]) + ', you&#39;re booked for ' + esc(s.name) + ' with ' + esc(b.staff) + ' at RLR Beauty tomorrow at ' + tfmt(b.time) + '. Reply C to change.</p><span>Sent automatically the day before (live version). Demo: no message is sent.</span></div>';
+      if (fresh && !DB.saving()) h += '<p class="note" role="status">This browser is not saving the demo, so this booking lasts only while this page stays open.</p>';
       if (fresh) h += '<p class="small">Screenshot this for your records. In the live version a text and an email arrive here too, with a reminder the day before.</p>';
       h += '<div class="actions">';
-      if (fresh) h += '<a class="btn btn--dark" href="' + esc(gcal(b)) + '" target="_blank" rel="noopener">Add to calendar</a><button class="btn btn--line" type="button" data-act="tomine">Manage or cancel</button>';
+      if (fresh) h += '<a class="btn btn--dark" href="data:text/calendar;charset=utf-8,' + encodeURIComponent(ics(b)) + '" download="rlr-beauty-' + esc(b.ref) + '.ics">Add to calendar</a><button class="btn btn--line" type="button" data-act="tomine">Manage or cancel</button>';
       else if (within) h += '<a class="btn btn--line" href="tel:+447809236386">Call to change: 07809 236386</a>';
       else if (confirmId === b.id) h += '<button class="btn btn--dark" type="button" data-act="cancelyes" data-id="' + b.id + '">Yes, cancel it</button><button class="btn btn--line" type="button" data-act="cancelno">Keep it</button>';
       else h += '<button class="btn btn--dark" type="button" data-act="movestart" data-id="' + b.id + '">Move</button><button class="btn btn--line" type="button" data-act="cancel" data-id="' + b.id + '">Cancel</button>';
@@ -2685,8 +2803,8 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   function viewMine() {
     var list = C.bookings.slice().sort(function (a, b) { return stamp(a.date, a.time) - stamp(b.date, b.time); });
     var up = list.filter(function (b) { return b.status !== 'cancelled' && stamp(b.date, b.time) >= Date.now(); }), rest = list.filter(function (b) { return up.indexOf(b) < 0; }).reverse();
-    if (!list.length) return '<div class="pane"><h3 tabindex="-1">No bookings yet.</h3><p class="sub">Bookings made in this browser show up here, ready to move or cancel.</p><div class="actions"><button class="btn btn--dark" type="button" data-act="again">Book a treatment</button></div></div>';
-    return '<div class="pane"><h3 tabindex="-1">Your bookings</h3><p class="sub">Tap a booking to see it, move it or cancel it (up to 24 hours before).</p><div class="aclist mine">' + up.concat(rest).map(function (b) { return card(b, { own: true, lines: 3, date: true }); }).join('') + '</div></div>';
+    if (!list.length) return '<div class="pane"><h3 tabindex="-1">No bookings yet.</h3><p class="sub">Bookings made in this browser show up here, ready to move or cancel.</p>' + badNote() + '<div class="actions"><button class="btn btn--dark" type="button" data-act="again">Book a treatment</button></div></div>';
+    return '<div class="pane"><h3 tabindex="-1">Your bookings</h3><p class="sub">Tap a booking to see it, move it or cancel it (up to 24 hours before).</p>' + badNote() + '<div class="aclist mine">' + up.concat(rest).map(function (b) { return card(b, { own: true, lines: 3, date: true }); }).join('') + '</div></div>';
   }
 
   /* ---------- owner view ---------- */
@@ -2694,21 +2812,21 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     { id: 'se1', sample: true, name: 'Sample: enquiry 1', contact: '07700 900123', kind: 'Bridal party', msg: '(Sample entry, not a real message.) Bridal party of six, a Saturday morning in June, at their place.', at: Date.now() - 26 * 3600e3 },
     { id: 'se2', sample: true, name: 'Sample: enquiry 2', contact: 'dee@example.com', kind: 'Retreat or event', msg: '(Sample entry, not a real message.) Two places asked for at an evening event.', at: Date.now() - 3 * 86400e3 }
   ];
-  function ownerDay() { if (O.day) return O.day; var d = new Date(); for (var i = 0; i < 7; i++) { var k = dkey(addDays(d, i)); if (isOpen(k)) return O.day = k; } return O.day = dkey(d); }
+  function ownerDay() { if (O.day) return O.day; var d = londonDay(); for (var i = 0; i < 7; i++) { var k = dkey(addDays(d, i)); if (isOpen(k)) return O.day = k; } return O.day = dkey(d); }
   function ownerBody() {
     var h = '';
     if (O.tab === 'diary') {
       var k = ownerDay(), list = dayBookings(k).sort(function (a, b) { return a.time - b.time || (a.staff < b.staff ? -1 : 1); });
       var live = list.filter(function (b) { return b.status !== 'cancelled'; }), total = 0, nos = 0;
       live.forEach(function (b) { if (b.mark === 'noshow') nos++; else total += BYID[b.sid].num; });
-      h += '<div class="actions dnav" style="margin:0 0 10px;align-items:center"><button class="mini" type="button" data-act="oday" data-id="-1" aria-label="Previous day">‹</button><b style="font:600 1.3rem var(--serif);flex:1;text-align:center">' + (k === dkey(new Date()) ? 'Today, ' : '') + dshort(k) + '</b><button class="mini" type="button" data-act="oday" data-id="1" aria-label="Next day">›</button></div>';
+      h += '<div class="actions dnav" style="margin:0 0 10px;align-items:center"><button class="mini" type="button" data-act="oday" data-id="-1" aria-label="Previous day">‹</button><b style="font:600 1.3rem var(--serif);flex:1;text-align:center">' + (k === todayKey() ? 'Today, ' : '') + dshort(k) + '</b><button class="mini" type="button" data-act="oday" data-id="1" aria-label="Next day">›</button></div>';
       h += '<div class="kpis kpis--s"><div class="kpi"><b>' + live.length + '</b><span>appointments</span></div><div class="kpi"><b>£' + (Math.round(total * 100) / 100).toLocaleString('en-GB') + '</b><span>day total (priced treatments)</span></div><div class="kpi"><b>' + nos + '</b><span>no-shows</span></div></div>';
       if (!list.length) h += '<p class="sub">' + (isOpen(k) ? 'Nothing booked.' : 'Closed (sample hours).') + '</p>';
       h += '<div class="aclist">' + list.map(function (b) { return card(b, { own: true, lines: 3 }); }).join('') + '</div>';
     } else if (O.tab === 'clients') {
-      var map = {}, today = new Date();
-      for (var i = -1; i < 15; i++) dayBookings(dkey(addDays(today, i))).forEach(function (b) { if (b.isPatch) return; var key = b.phone.replace(/\s/g, ''); (map[key] = map[key] || { name: b.name, phone: b.phone, sample: b.sample, v: [] }).v.push(b); });
-      C.bookings.forEach(function (b) { var key = b.phone.replace(/\s/g, ''); var m = map[key] = map[key] || { name: b.name, phone: b.phone, v: [] }; if (m.v.indexOf(b) < 0 && !m.v.some(function (x) { return x.id === b.id; })) m.v.push(b); });
+      var map = {}, today = londonDay();
+      for (var i = -1; i < 15; i++) dayBookings(dkey(addDays(today, i))).forEach(function (b) { if (b.isPatch) return; var key = pkey(b.phone); (map[key] = map[key] || { name: b.name, phone: b.phone, sample: b.sample, v: [] }).v.push(b); });
+      C.bookings.forEach(function (b) { var key = pkey(b.phone); var m = map[key] = map[key] || { name: b.name, phone: b.phone, v: [] }; if (m.v.indexOf(b) < 0 && !m.v.some(function (x) { return x.id === b.id; })) m.v.push(b); });
       var q = O.q.toLowerCase(), arr = Object.keys(map).map(function (k2) { return map[k2]; }).filter(function (c) { return !q || (c.name + c.phone).toLowerCase().indexOf(q) >= 0; }).sort(function (a, b) { return (a.sample ? 1 : 0) - (b.sample ? 1 : 0) || (a.name < b.name ? -1 : 1); });
       h += '<label class="vh" for="oq">Search clients</label><input class="search" id="oq" type="search" placeholder="Search by name or mobile" value="' + esc(O.q) + '" autocomplete="off"><div id="olist">' + clientsHTML(arr) + '</div>';
     } else if (O.tab === 'inbox') {
@@ -2725,7 +2843,19 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
 
   /* ---------- staff side (demo): sign-in, owner dashboard + calendar, practitioner view. Display only: booking logic is not touched ---------- */
-  function blocksOf(st) { try { var b = JSON.parse(C.notes['block:' + st] || '[]'); return Array.isArray(b) ? b.filter(function (x) { return x && typeof x.d === 'string' && typeof x.a === 'number' && typeof x.b === 'number' && x.b > x.a; }) : []; } catch (e) { return []; } }
+  function blocksOf(st) { try { var b = JSON.parse(C.notes['block:' + st] || '[]'); return Array.isArray(b) ? b.filter(okBlock) : []; } catch (e) { return []; } }
+  function cutBlock(list, s) {                       // fix2 B2: list minus the stretch s
+    var out = []; list.forEach(function (x) { if (x.d !== s.d || x.b <= s.a || x.a >= s.b) { out.push(x); return; } if (x.a < s.a) out.push({ d: x.d, a: x.a, b: s.a }); if (x.b > s.b) out.push({ d: x.d, a: s.b, b: x.b }); }); return out;
+  }
+  function clipBlock(list, s) { return list.filter(function (x) { return x.d === s.d && x.b > s.a && x.a < s.b; }).map(function (x) { return { d: x.d, a: Math.max(x.a, s.a), b: Math.min(x.b, s.b) }; }); }
+  function sameBlock(x, g) { return x.d === g.d && x.a === g.a && x.b === g.b; }
+  function bkey(x) { return x.d + '|' + x.a + '|' + x.b; }   // fix3: a block's stable id (its day and times), captured when a row or sheet is drawn
+  function bparse(k) { var p = String(k || '').split('|'), o = { d: p[0], a: +p[1], b: +p[2] }; return okBlock(o) ? o : null; }
+  var CHANGED = 'This was already changed in another window, so nothing was changed. The view below is up to date.';
+  function removeBlock(who, gone) {                 // fix2 B2: remove that block from the latest saved copy, keep every other change
+    return DB.editBlocks(who, function (cur) { var i = -1; cur.forEach(function (x, n) { if (i < 0 && sameBlock(x, gone)) i = n; }); if (i >= 0) cur.splice(i, 1); return { list: cur, out: i >= 0 }; })
+      .then(function (ok) { O.undo = ok ? { who: who, gone: gone } : null; if (!ok) O.offMsg = CHANGED; });
+  }
   function isAllDay(b) { return b.a <= HOURS.open && b.b >= HOURS.close; }
   function offLabel(b) { return isAllDay(b) ? 'Day off' : 'Time off'; }
   function offWhen(b) { return isAllDay(b) ? 'All day' : tfmt(b.a) + ' to ' + tfmt(b.b); }
@@ -2745,6 +2875,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   function stTag(x) { return x.status === 'cancelled' ? ' <em class="tag tag--x">Cancelled</em>' : x.mark === 'noshow' ? ' <em class="tag tag--no">No-show</em>' : x.mark === 'arrived' ? ' <em class="tag tag--ok">Arrived</em>' : ''; }
   function card(x, o) {                              // o: {own: show the practitioner, lines: 1-3, style, date: show the date}
     SEEN[x.id] = x;
+    if (o.mv == null && mode === 'owner' && x.status !== 'cancelled') o.mv = inOff(x, x.staff);   // audit S8: same tag in Diary, Dashboard and Week
     var n = Math.max(1, Math.min(3, o.lines || 3)), samp = x.sample ? '<em class="tag">SAMPLE</em> ' : '', mvt = o.mv ? '<em class="tag tag--mv">Needs moving</em> ' : '';
     var l1 = n === 1 ? '<span class="ac__row"><span class="ac__l1"><b>' + (o.date ? dshort(x.date) + ', ' : '') + tfmt(x.time) + '</b> ' + esc(whatOf(x)) + '</span>' + (o.mv ? '<em class="tag tag--mv">Needs moving</em>' : x.sample ? '<em class="tag">SAMPLE</em>' : '') + '</span>'   // one clean line: start time + treatment, the tag never cut
       : '<span class="ac__l1"><b>' + (o.date ? dshort(x.date) + ', ' : '') + trange(x) + '</b> ' + esc(whatOf(x)) + '</span>';
@@ -2755,7 +2886,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function offCard(b, st, n, style, lines, under) {
     var two = (lines || 1) >= 2;
-    return '<button type="button" class="ac ac--off ac--' + (two ? 2 : 1) + (isAllDay(b) ? ' ac--allday' : '') + (under ? ' ac--under' : '') + '" data-act="openoff" data-st="' + esc(st) + '" data-id="' + n + '" aria-label="' + offLabel(b) + ', ' + offWhen(b) + '. Open"' + (style ? ' style="' + style + '"' : '') + '><span class="ac__l1"><b>' + offLabel(b) + '</b>' + (two ? '' : ' ' + offWhen(b)) + '</span>' + (two ? '<span class="ac__l2">' + offWhen(b) + '</span>' : '') + '</button>';
+    return '<button type="button" class="ac ac--off ac--' + (two ? 2 : 1) + (isAllDay(b) ? ' ac--allday' : '') + (under ? ' ac--under' : '') + '" data-act="openoff" data-st="' + esc(st) + '" data-id="' + bkey(b) + '" aria-label="' + offLabel(b) + ', ' + offWhen(b) + '. Open"' + (style ? ' style="' + style + '"' : '') + '><span class="ac__l1"><b>' + offLabel(b) + '</b>' + (two ? '' : ' ' + offWhen(b)) + '</span>' + (two ? '<span class="ac__l2">' + offWhen(b) + '</span>' : '') + '</button>';
   }
   function lanes(items) {                            // overlapping items share the width in equal columns, like a paper diary
     items.sort(function (a, b) { return a.s - b.s || b.e - a.e; });
@@ -2773,10 +2904,10 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     if (!SH) return '';
     var h = '<div class="shx" data-act="shclose"></div><div class="sheet app" data-mode="' + (mode === 'owner' ? 'owner' : 'book') + '" role="dialog" aria-modal="true" aria-labelledby="shT"><button class="mini sheet__x" type="button" data-act="shclose">Close</button>';
     if (SH.off) {
-      var bl = blocksOf(SH.st)[SH.n]; if (!bl) { SH = null; return ''; }
+      var bl = bparse(SH.key); if (!bl) { SH = null; return ''; }   // fix3: the block this sheet was opened for, never the one now at its old position
       var inside = liveList(bl.d, SH.st).filter(function (x) { return x.time < bl.b && x.time + x.dur > bl.a; });
       return h + '<p class="ref"><em class="tag">' + offLabel(bl) + '</em></p><h3 id="shT" tabindex="-1">' + offLabel(bl) + '</h3><ul class="sum"><li><span>Who</span><span>' + esc(SH.st) + '</span></li><li><span>When</span><span>' + dlong(bl.d) + ', ' + offWhen(bl) + '</span></li>' + (inside.length ? '<li><span>Needs moving</span><span>' + inside.map(function (x) { return tfmt(x.time) + ' ' + esc(whatOf(x)) + ', ' + esc(x.name); }).join('; ') + '</span></li>' : '') + '</ul><p class="small">These times cannot be booked online (in this demo, in this browser).</p>' +
-        (mode === 'owner' && O.who === SH.st ? '<div class="actions"><button class="btn btn--line" type="button" data-act="offrm" data-st="' + esc(SH.st) + '" data-id="' + SH.n + '">Remove this time off</button></div>' : '<p class="small">Only ' + esc(SH.st) + ' can remove it, from their own Time off.</p>') + '</div>';
+        (mode === 'owner' && O.who === SH.st ? '<div class="actions"><button class="btn btn--line" type="button" data-act="offrm" data-st="' + esc(SH.st) + '" data-id="' + SH.key + '">Remove this time off</button></div>' : '<p class="small">Only ' + esc(SH.st) + ' can remove it, from their own Time off.</p>') + '</div>';
     }
     var x = findAppt(SH.id); if (!x) { SH = null; return ''; }
     if (mode !== 'owner') return h + '<h3 id="shT" class="vh" tabindex="-1">Your booking</h3>' + ticket(x, false) + '</div>';
@@ -2791,30 +2922,32 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     if (!cx) {
       h += '<div class="actions sheet__acts"><button class="btn btn--line" type="button" data-act="mark" data-id="' + esc(x.id) + '" data-v="arrived" aria-pressed="' + (x.mark === 'arrived') + '">Arrived</button><button class="btn btn--line" type="button" data-act="mark" data-id="' + esc(x.id) + '" data-v="noshow" aria-pressed="' + (x.mark === 'noshow') + '">No-show</button>';
       if (b) h += confirmId === b.id ? '<button class="btn btn--dark" type="button" data-act="cancelyes" data-id="' + esc(b.id) + '">Yes, cancel it</button><button class="btn btn--line" type="button" data-act="cancelno">Keep it</button>' : '<button class="btn btn--line" type="button" data-act="movestart" data-id="' + esc(b.id) + '">Move</button><button class="btn btn--line" type="button" data-act="cancel" data-id="' + esc(b.id) + '">Cancel</button>';
-      h += '</div>' + (b ? '' : '<p class="small">' + (x.sample ? 'Sample entry: Move and Cancel work on bookings made in this demo.' : 'Patch tests move with their treatment booking.') + '</p>');
+      h += '</div>' + (b ? '' : '<p class="small">' + (x.sample ? 'Sample entry: Move and Cancel work on bookings made in this demo.' : 'A patch test keeps its own date and time when its treatment is moved.') + '</p>');
     }
     return h + '</div>';
   }
   var shroot = D.createElement('div'); shroot.id = 'shroot'; shroot.hidden = true; D.body.appendChild(shroot);
   function renderSheet() {
     shroot.innerHTML = sheetHTML(); shroot.hidden = !SH; D.documentElement.classList.toggle('sheet-open', !!SH);
+    ['#main', '.top', '.bar', '.skip'].forEach(function (s) { var el = $(s); if (el) { if (SH) el.setAttribute('inert', ''); else if (!D.documentElement.classList.contains('tv-open')) el.removeAttribute('inert'); } });   // audit S9; fix2: the viewer keeps its inert: background out of reach while the sheet is open
     if (!SH) return;
     var f = (SH.f && $('[data-act="' + SH.f + '"]' + (SH.v ? '[data-v="' + SH.v + '"]' : ''), shroot)) || $('h3', shroot) || $('.sheet', shroot);
     if (f) try { f.focus({ preventScroll: true }); } catch (e) { }
   }
   function refocus(o) {
     if (!o) return;
-    var el = o.off ? $('[data-act="openoff"][data-st="' + o.st + '"][data-id="' + o.n + '"]', app) : $('[data-act="open"][data-id="' + o.id + '"]', app);
+    var el = o.off ? $('[data-act="openoff"][data-st="' + o.st + '"][data-id="' + o.key + '"]', app) : $('[data-act="open"][data-id="' + o.id + '"]', app);
     if (el) try { el.focus({ preventScroll: true }); } catch (e) { }
   }
   D.addEventListener('keydown', function (e) {        // Escape closes the sheet wherever focus is; Tab stays inside it
     if (!SH) return;
-    if (e.key === 'Escape') { e.preventDefault(); var o = SH; SH = null; confirmId = null; renderSheet(); refocus(o); return; }
+    if (e.key === 'Escape') { e.preventDefault(); var o = SH; SH = null; confirmId = null; renderSheet(); refocus(o); catchUp(); return; }
     if (e.key !== 'Tab') return;
-    var fs = $$('button, a[href], select, input, textarea, [tabindex="0"]', $('.sheet', shroot)); if (!fs.length) return;
-    var a = fs[0], z = fs[fs.length - 1];
-    if (e.shiftKey && (D.activeElement === a || !$('.sheet', shroot).contains(D.activeElement))) { e.preventDefault(); z.focus(); }
-    else if (!e.shiftKey && D.activeElement === z) { e.preventDefault(); a.focus(); }
+    var fs = $$('button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), summary, [tabindex="0"]', $('.sheet', shroot))
+      .filter(function (el) { return el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden'; });   // audit S9
+    if (!fs.length) return;
+    var i = fs.indexOf(D.activeElement);
+    if (i < 0 || (!e.shiftKey && i === fs.length - 1) || (e.shiftKey && i === 0)) { e.preventDefault(); (e.shiftKey ? fs[fs.length - 1] : fs[0]).focus(); }
   });
   function offWarnHTML() {
     var w = O.offWarn; if (!w) return '';   // d2d: no longer used; time off is saved whole and appointments inside are flagged
@@ -2856,18 +2989,21 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       var k = dkey(addDays(dparse(k0), i));
       h += '<tr><th>' + dshort(k) + '</th>' + cols.map(function (c) {
         var l = liveList(k, c), off = blocksOf(c).filter(function (x) { return x.d === k; });
-        if (!isOpen(k)) return '<td><i>Closed</i></td>';
-        if (cols.length > 1) return '<td>' + (l.length ? '<b>' + l.length + '</b><span>' + tfmt(l[0].time) + ' to ' + tfmt(l[l.length - 1].time + l[l.length - 1].dur) + '</span>' : '<i>Free</i>') + (off.length ? '<span>' + off.map(function (b) { return offLabel(b) + (isAllDay(b) ? '' : ' ' + offWhen(b)); }).join(', ') + '</span>' : '') + '</td>';
-        return '<td class="aclist aclist--s">' + (l.length ? l.map(function (x) { return card(x, { lines: 2, mv: inOff(x, c) }); }).join('') : '<i>Free</i>') + blocksOf(c).map(function (x, n) { return x.d === k ? offCard(x, c, n, '', 2) : ''; }).join('') + '</td>';
+        var offTxt = off.length ? '<span>' + off.map(function (b) { return offLabel(b) + (isAllDay(b) ? '' : ' ' + offWhen(b)); }).join(', ') + '</span>' : '';
+        var offCards = blocksOf(c).map(function (x, n) { return x.d === k ? offCard(x, c, n, '', 2) : ''; }).join('');
+        if (!isOpen(k)) return '<td><i>Closed</i>' + (cols.length > 1 ? offTxt : offCards) + '</td>';   // audit S8: time off on a closed day stays visible and removable
+        var mvn = l.filter(function (x) { return inOff(x, c); }).length;
+        if (cols.length > 1) return '<td>' + (l.length ? '<b>' + l.length + '</b><span>' + tfmt(l[0].time) + ' to ' + tfmt(l[l.length - 1].time + l[l.length - 1].dur) + '</span>' : '<i>Free</i>') + offTxt + (mvn ? '<span class="wk-mv">' + mvn + ' need' + (mvn === 1 ? 's' : '') + ' moving</span>' : '') + '</td>';
+        return '<td class="aclist aclist--s">' + (l.length ? l.map(function (x) { return card(x, { lines: 2, mv: inOff(x, c) }); }).join('') : '<i>Free</i>') + offCards + '</td>';
       }).join('') + '</tr>';
     }
     return h + '</tbody></table></div>';
   }
-  function dayNav(k) { return '<div class="actions dnav" style="margin:0 0 10px;align-items:center"><button class="mini" type="button" data-act="oday" data-id="-1" aria-label="Previous day">‹</button><b style="font:600 1.3rem var(--serif);flex:1;text-align:center">' + (k === dkey(new Date()) ? 'Today, ' : '') + dshort(k) + '</b><button class="mini" type="button" data-act="oday" data-id="1" aria-label="Next day">›</button></div>'; }
+  function dayNav(k) { return '<div class="actions dnav" style="margin:0 0 10px;align-items:center"><button class="mini" type="button" data-act="oday" data-id="-1" aria-label="Previous day">‹</button><b style="font:600 1.3rem var(--serif);flex:1;text-align:center">' + (k === todayKey() ? 'Today, ' : '') + dshort(k) + '</b><button class="mini" type="button" data-act="oday" data-id="1" aria-label="Next day">›</button></div>'; }
   function offMsgHTML() { return O.offMsg ? '<div class="note offmsg" role="status"><span>' + esc(O.offMsg) + '</span>' + (O.undo ? '<button class="more" type="button" data-act="offundo">Undo</button>' : '') + '</div>' : ''; }
   function calTab(cols) {
     var k = ownerDay();
-    return offMsgHTML() + '<div class="otabs otabs--sm"><button class="otab" type="button" data-act="ocal" data-id="day" aria-selected="' + (O.cal === 'day') + '">Day</button><button class="otab" type="button" data-act="ocal" data-id="week" aria-selected="' + (O.cal === 'week') + '">Week</button></div>' + dayNav(k) + (O.cal === 'day' ? calDay(k, cols) : calWeek(k, cols));
+    return offMsgHTML() + '<div class="otabs otabs--sm" role="group" aria-label="Calendar view"><button class="otab" type="button" data-act="ocal" data-id="day" aria-pressed="' + (O.cal === 'day') + '">Day</button><button class="otab" type="button" data-act="ocal" data-id="week" aria-pressed="' + (O.cal === 'week') + '">Week</button></div>' + dayNav(k) + (O.cal === 'day' ? calDay(k, cols) : calWeek(k, cols));
   }
   function viewOwner() {
     if (!O.who) {
@@ -2879,12 +3015,12 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     var tabs = own ? [['dash', 'Dashboard'], ['cal', 'Calendar'], ['diary', 'Diary'], ['clients', 'Clients'], ['inbox', 'Enquiries (' + open + ')'], ['report', 'Week report'], ['settings', 'Settings'], ['switch', 'Leaving Timely']] : [['cal', 'My calendar'], ['menu', 'My treatments'], ['myclients', 'My clients'], ['off', 'Time off']];
     if (!tabs.some(function (t) { return t[0] === O.tab; })) O.tab = tabs[0][0];
     var h = '<div class="pane"><div class="shead"><span class="tag">Demo</span><b>' + (own ? 'Owner' : esc(st)) + '</b><button class="mini" type="button" data-act="ologout">Sign out</button></div>' +
-      '<h3 tabindex="-1">' + (own ? 'The salon&#39;s side.' : esc(st) + '&#39;s side.') + '</h3><p class="sub">' + (own ? 'What RLR would see at the desk.' : 'What ' + esc(st) + ' would see on a phone.') + ' Entries marked sample are made up so the view is not empty; anything booked in this demo lands here too.</p>' +
-      '<div class="otabs" role="tablist">' + tabs.map(function (t) { return '<button class="otab" role="tab" type="button" data-act="otab" data-id="' + t[0] + '" aria-selected="' + (O.tab === t[0]) + '">' + t[1] + '</button>'; }).join('') + '</div>';
+      '<h3 tabindex="-1">' + (own ? 'The salon&#39;s side.' : esc(st) + '&#39;s side.') + '</h3><p class="sub">' + (own ? 'What RLR would see at the desk.' : 'What ' + esc(st) + ' would see on a phone.') + ' Entries marked sample are made up so the view is not empty; anything booked in this demo lands here too.</p>' + badNote() +
+      '<div class="otabs" role="group" aria-label="Staff views">' + tabs.map(function (t) { return '<button class="otab" type="button" data-act="otab" data-id="' + t[0] + '" aria-pressed="' + (O.tab === t[0]) + '">' + t[1] + '</button>'; }).join('') + '</div>';
     if (O.tab === 'dash') {
       var k = ownerDay(), l = liveList(k), total = 0, nos = 0;
       l.forEach(function (x) { if (x.mark === 'noshow') nos++; else total += BYID[x.sid].num; });
-      h += '<p class="part">' + (k === dkey(new Date()) ? 'Today, ' : 'Next open day, ') + dlong(k) + '</p><div class="kpis kpis--4 kpis--s"><div class="kpi"><b>' + l.length + '</b><span>appointments</span></div><div class="kpi"><b>£' + (Math.round(total * 100) / 100).toLocaleString('en-GB') + '</b><span>takings (priced treatments)</span></div><div class="kpi"><b>' + nos + '</b><span>no-shows</span></div><div class="kpi"><b>' + open + '</b><span>enquiries to answer</span></div></div>' +
+      h += '<p class="part">' + (k === todayKey() ? 'Today, ' : 'Next open day, ') + dlong(k) + '</p><div class="kpis kpis--4 kpis--s"><div class="kpi"><b>' + l.length + '</b><span>appointments</span></div><div class="kpi"><b>£' + (Math.round(total * 100) / 100).toLocaleString('en-GB') + '</b><span>takings (priced treatments)</span></div><div class="kpi"><b>' + nos + '</b><span>no-shows</span></div><div class="kpi"><b>' + open + '</b><span>enquiries to answer</span></div></div>' +
         '<p class="part">Who is in</p><div class="swho swho--row">' + STAFF.map(function (s2) { var n = liveList(k, s2).length; return '<span class="swho__m">' + (TEAMIMG[s2] ? '<img src="' + TEAMIMG[s2] + '" width="40" height="40" alt="">' : '') + '<b>' + s2 + '</b><span>' + n + (n === 1 ? ' appointment' : ' appointments') + '</span></span>'; }).join('') + '</div>' +
         '<p class="part">Next up</p><div class="aclist">' + (l.slice(0, 6).map(function (x) { return card(x, { own: true, lines: 3 }); }).join('') || '<p class="sub">Nothing booked.</p>') + '</div>' +
         '<div class="kpis kpis--2"><button class="kpi kpi--b" type="button" data-act="otab" data-id="settings"><b>Reminders on</b><span>The day before, by text (demo: none sent)</span></button><button class="kpi kpi--b" type="button" data-act="otab" data-id="settings"><b>4 no-shows</b><span>this month (sample) · ' + (dep() === 'off' ? 'not protected: switch on deposits' : 'protected by deposits') + '</span></button></div>' +
@@ -2896,8 +3032,8 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       mine.forEach(function (s) { if (s.cat !== cat) { cat = s.cat; h += '</ul><p class="part">' + esc(CATLABEL[cat] || cat) + '</p><ul class="sum">'; } h += '<li><span>' + esc(s.name) + ' · ' + durtxt(s.mins) + '</span><span>' + price(s) + '</span></li>'; });
       h += '</ul>';
     } else if (O.tab === 'myclients') {
-      var map = {}, today = new Date();
-      for (var i = -1; i < 15; i++) dayBookings(dkey(addDays(today, i))).forEach(function (x) { if (x.isPatch || x.staff !== st) return; var key = x.phone.replace(/\s/g, ''); (map[key] = map[key] || { name: x.name, phone: x.phone, sample: x.sample, v: [] }).v.push(x); });
+      var map = {}, today = londonDay();
+      for (var i = -1; i < 15; i++) dayBookings(dkey(addDays(today, i))).forEach(function (x) { if (x.isPatch || x.staff !== st) return; var key = pkey(x.phone); (map[key] = map[key] || { name: x.name, phone: x.phone, sample: x.sample, v: [] }).v.push(x); });
       h += '<p class="sub">Clients with a visit to ' + esc(st) + ' in the next two weeks.</p>' + clientsHTML(Object.keys(map).map(function (k2) { return map[k2]; }).sort(function (a, c) { return a.name < c.name ? -1 : 1; }));
     } else if (O.tab === 'off') {
       var bl = blocksOf(st), opts = ''; for (var t = HOURS.open; t <= HOURS.close; t += 30) opts += '<option value="' + t + '">' + tfmt(t) + '</option>';
@@ -2906,7 +3042,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
         '<form class="f" id="offform"><label>Day<input type="date" name="d" required value="' + ownerDay() + '"></label>' +
         '<fieldset class="offlen"><legend>How long</legend><label class="rad"><input type="radio" name="len" value="all"' + (allc ? ' checked' : '') + '> All day</label><label class="rad"><input type="radio" name="len" value="part"' + (allc ? '' : ' checked') + '> Part of the day</label></fieldset>' +
         '<div class="offpart"' + (allc ? ' hidden' : '') + '><label>From<select name="a">' + opts + '</select></label><label>Until<select name="b">' + opts.replace('value="' + (HOURS.open + 60) + '"', 'value="' + (HOURS.open + 60) + '" selected') + '</select></label></div><div class="actions"><button class="btn btn--line" type="submit">Save time off</button></div></form>' +
-        '<ul class="sum" style="margin-top:14px">' + (bl.map(function (x, n) { return '<li><span>' + dshort(x.d) + ', ' + (isAllDay(x) ? 'day off' : offWhen(x)) + '</span><span><button class="more" type="button" data-act="offdel" data-id="' + n + '">Remove</button></span></li>'; }).join('') || '<li><span>No time blocked yet.</span><span></span></li>') + '</ul>';
+        '<ul class="sum" style="margin-top:14px">' + (bl.map(function (x, n) { return '<li><span>' + dshort(x.d) + ', ' + (isAllDay(x) ? 'day off' : offWhen(x)) + '</span><span><button class="more" type="button" data-act="offdel" data-id="' + bkey(x) + '">Remove</button></span></li>'; }).join('') || '<li><span>No time blocked yet.</span><span></span></li>') + '</ul>';
     } else if (O.tab === 'report') h += weekReport();
     else if (O.tab === 'settings') h += settingsTab();
     else h += ownerBody();
@@ -2920,12 +3056,16 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     if (e.target.id !== 'offform' || !O.who || O.who === 'owner') return; e.preventDefault();
     var f = e.target, d = f.d.value, all = f.querySelector('[name=len]:checked').value === 'all', a2 = all ? HOURS.open : +f.a.value, b2 = all ? HOURS.close : +f.b.value;
     if (!d || b2 <= a2) { O.offMsg = 'Until must be later than From.'; O.undo = null; render(false); return; }
-    var prev = blocksOf(O.who), nb = { d: d, a: a2, b: b2 };
+    O.day = d;   // audit S7: the form and calendar stay on the day just saved
+    var who0 = O.who, nb = { d: d, a: a2, b: b2 };
     var hits = liveList(d, O.who).filter(function (x) { return x.time < b2 && x.time + x.dur > a2; });
-    O.offWarn = null; O.offLen = all ? 'all' : 'part'; O.undo = { who: O.who, prev: prev };
+    O.offWarn = null; O.offLen = all ? 'all' : 'part'; O.undo = null;
     O.offMsg = 'Saved: ' + (isAllDay(nb) ? 'day off' : 'time off ' + offWhen(nb)) + ' on ' + dshort(d) + '.' + (isOpen(d) ? '' : ' The salon is closed that day anyway (sample hours).') +
       (hits.length ? ' ' + hits.length + (hits.length === 1 ? ' appointment is' : ' appointments are') + ' already booked in that time and flagged Needs moving on your calendar.' : '');
-    DB.setNote('block:' + O.who, JSON.stringify(mergeBlocks(prev.concat([nb])))).then(refresh).then(function () { render(false); });
+    DB.editBlocks(who0, function (cur) {   // fix2 B2: merged into the latest saved copy. fix3: remember the block made and the blocks it replaced
+      var list = mergeBlocks(cur.concat([nb])), made = list.filter(function (x) { return x.d === nb.d && x.a <= nb.a && x.b >= nb.b; })[0];
+      return { list: list, out: { made: made, was: cur.filter(function (x) { return x.d === made.d && x.a >= made.a && x.b <= made.b; }) } };
+    }).then(function (r) { O.undo = { who: who0, made: r.made, was: r.was }; }).then(refresh).then(function () { if (!DB.saving()) O.offMsg += ' This browser is not saving the demo, so it lasts only while this page stays open.'; render(false); });
   });
   RLR.staffLogin = function () { mode = 'owner'; render(true); setTimeout(toFirst, 0); };   // d2c: staff panel lands at its top
 
@@ -2935,7 +3075,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   function hashOf(s) { var h = 7; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 100003; return h; }
   function clientFlags(c, key) {                    // never invent a medical-style fact for a real client
     if (c.sample) {
-      var hh = hashOf(key), d = addDays(new Date(), -(12 + hh % 250)), until = addDays(d, 183), ok = until.getTime() > Date.now(), consent = hh % 5 !== 0;
+      var hh = hashOf(key), d = addDays(londonDay(), -(12 + hh % 250)), until = addDays(d, 183), ok = until.getTime() > Date.now(), consent = hh % 5 !== 0;
       return '<ul class="sum cflags"><li><span>Last patch test <em class="tag">SAMPLE</em></span><span>' + dshort(dkey(d)) + ' ' + d.getFullYear() + ' ' + (ok ? '<em class="tag tag--ok">Valid until ' + dshort(dkey(until)) + '</em>' : '<em class="tag tag--warn">Patch test due</em>') + '</span></li>' +
         '<li><span>Consent form <em class="tag">SAMPLE</em></span><span>' + (consent ? '<em class="tag tag--ok">Signed</em>' : '<em class="tag tag--warn">Not signed yet</em>') + '</span></li></ul><p class="small">Sample records: made up to show the layout, not real client data.</p>';
     }
@@ -2946,9 +3086,9 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     return '<ul class="sum cflags"><li><span>Patch test</span><span>' + line + '</span></li><li><span>Consent form</span><span><em class="tag">Not recorded</em></span></li></ul>';
   }
   function weekReport() {
-    var k0 = dkey(new Date()), tot = {}, hours = {}, seen = {}, max = 0, n = 0;
+    var k0 = todayKey(), tot = {}, hours = {}, seen = {}, max = 0, n = 0;
     STAFF.forEach(function (s) { tot[s] = 0; });
-    for (var i = 0; i < 7; i++) liveList(dkey(addDays(dparse(k0), i))).forEach(function (x) { if (x.isPatch) return; if (x.mark !== 'noshow') tot[x.staff] += BYID[x.sid].num; var hr = Math.floor(x.time / 60); hours[hr] = (hours[hr] || 0) + 1; var key = x.phone.replace(/\s/g, ''); seen[key] = (seen[key] || 0) + 1; n++; });
+    for (var i = 0; i < 7; i++) liveList(dkey(addDays(dparse(k0), i))).forEach(function (x) { if (x.isPatch) return; if (x.mark !== 'noshow') tot[x.staff] += BYID[x.sid].num; var hr = Math.floor(x.time / 60); hours[hr] = (hours[hr] || 0) + 1; var key = pkey(x.phone); seen[key] = (seen[key] || 0) + 1; n++; });
     STAFF.forEach(function (s) { max = Math.max(max, tot[s]); });
     var keys = Object.keys(seen), re = keys.filter(function (k) { return seen[k] > 1; }).length, busy = Object.keys(hours).sort(function (a, c) { return hours[c] - hours[a]; })[0];
     return '<p class="sub">The next seven days, from the sample diary plus anything booked in this demo.</p><p class="part">Takings by practitioner (priced treatments)</p><div class="bars">' +
@@ -2957,14 +3097,14 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function settingsTab() {
     var d = dep(), opt = [['off', 'Off'], ['ten', '£10 deposit'], ['card', 'Card on file']];
-    return '<p class="part">No-show protection</p><p class="sub">Choose what a client gives to hold a slot. Try it: switch it on, then make a booking.</p><div class="otabs otabs--sm">' + opt.map(function (o) { return '<button class="otab" type="button" data-act="odep" data-id="' + o[0] + '" aria-selected="' + (d === o[0]) + '">' + o[1] + '</button>'; }).join('') + '</div>' +
+    return '<p class="part">No-show protection</p><p class="sub">Choose what a client gives to hold a slot. Try it: switch it on, then make a booking.</p><div class="otabs otabs--sm" role="group" aria-label="No-show protection">' + opt.map(function (o) { return '<button class="otab" type="button" data-act="odep" data-id="' + o[0] + '" aria-pressed="' + (d === o[0]) + '">' + o[1] + '</button>'; }).join('') + '</div>' +
       '<p class="small">' + (d === 'off' ? 'Off: clients book with no deposit.' : d === 'ten' ? 'On: the booking form says a £10 deposit secures the slot and the diary shows "Deposit held". Demo: no payment is taken; the amount is an example you can change.' : 'On: the booking form asks for a card on file and the diary shows "Card on file". Demo: no card is taken.') + '</p>' +
       '<p class="part">Reminders</p><ul class="sum"><li><span>Reminder</span><span><em class="tag tag--ok">On</em></span></li><li><span>When</span><span>The day before</span></li><li><span>How</span><span>By text</span></li></ul><p class="small">Demo: no messages are sent. The wording shows on the confirmation after a booking.</p>';
   }
   function clientsHTML(arr) {
     if (!arr.length) return '<p class="sub" style="margin-top:12px">No clients match.</p>';
     return arr.slice(0, 60).map(function (c) {
-      var key = c.phone.replace(/\s/g, ''), v = c.v.slice().sort(function (a, b) { return stamp(a.date, a.time) - stamp(b.date, b.time); });
+      var key = pkey(c.phone), v = c.v.slice().sort(function (a, b) { return stamp(a.date, a.time) - stamp(b.date, b.time); });
       return '<details class="cl"><summary><b>' + esc(c.name) + '</b>' + (c.sample ? '<span class="tag">Sample</span>' : '<span class="tag tag--ok">Online</span>') + '<span>' + v.length + (v.length > 1 ? ' visits' : ' visit') + '</span></summary><p class="small" style="margin:6px 0">' + esc(c.phone) + '</p>' + clientFlags(c, key) + '<ul class="sum" style="margin:6px 0">' +
         v.map(function (b) { return '<li><span>' + dshort(b.date) + ', ' + tfmt(b.time) + '</span><span>' + esc(BYID[b.sid].name) + ' · ' + esc(b.staff) + (b.status === 'cancelled' ? ' (cancelled)' : C.marks[b.id] === 'noshow' ? ' (no-show)' : '') + '</span></li>'; }).join('') +
         '</ul><div class="f"><label>Visit notes (demo: kept in this browser only)<textarea data-note="' + esc(key) + '" placeholder="Patch test date, colour mix, allergies, how they like their brows…">' + esc(C.notes[key] || '') + '</textarea></label></div></details>';
@@ -2973,10 +3113,11 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
 
   /* ---------- render + events ---------- */
   function render(focus) {
+    stale = false;
     app.setAttribute('data-mode', mode);
     app.innerHTML = mode === 'book' ? viewBook() : mode === 'mine' ? viewMine() : viewOwner();
     renderSheet();
-    $$('.mode').forEach(function (m) { m.setAttribute('aria-selected', m.getAttribute('data-mode') === mode ? 'true' : 'false'); });
+    $$('.mode').forEach(function (m) { m.setAttribute('aria-pressed', m.getAttribute('data-mode') === mode ? 'true' : 'false'); });
     if (focus) {
       var h3 = $('h3', app); if (h3) try { h3.focus({ preventScroll: true }); } catch (e) { }
       var r = app.getBoundingClientRect(); if (r.top < 0 || r.top > innerHeight * 0.6) { var y = r.top + (window.pageYOffset || D.documentElement.scrollTop) - 76; try { scrollTo({ top: y, behavior: 'auto' }); } catch (e) { scrollTo(0, y); } }
@@ -2985,7 +3126,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function go(step, err) { B.step = step; B.err = err || ''; render(true); }   // audit S7
   function chooseService(id, note) {
-    B.sid = id; B.who = 'any'; B.date = null; B.time = null; B.patch = needsPatchRule(BYID[id]) && !C.bookings.some(function (b) { return b.status !== 'cancelled'; }); B.patchPick = null; B.done = null; B.moving = null; B.open = null;
+    B.sid = id; B.who = 'any'; B.date = null; B.time = null; B.patch = needsPatchRule(BYID[id]); /* audit B3: on for every tint-type treatment; a client with a valid test unticks it */ B.patchPick = null; B.done = null; B.moving = null; B.open = null;
     if (note) B.form.notes = note;
     var s = svc(); if (B.with && s.staff.indexOf(B.with) >= 0) { B.who = B.with; go('when'); } else if (s.staff.length === 1) { B.who = s.staff[0]; go('when'); } else go('who');
   }
@@ -3017,76 +3158,83 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     var act = t.getAttribute('data-act'), id = t.getAttribute('data-id');
     if (SH && shroot.contains(t)) { SH.f = act; SH.v = t.getAttribute('data-v'); }
     if (act === 'open') { SH = { id: id }; confirmId = null; renderSheet(); return; }
-    if (act === 'openoff') { SH = { off: true, st: t.getAttribute('data-st'), n: +id }; renderSheet(); return; }
-    if (act === 'shclose') { var o = SH; SH = null; confirmId = null; renderSheet(); refocus(o); return; }
-    if (act === 'offundo') { var u = O.undo; if (!u) return; O.undo = null; O.offMsg = 'Undone.'; DB.setNote('block:' + u.who, JSON.stringify(u.prev)).then(refresh).then(function () { keepScroll(function () { render(false); }); }); return; }
-    if (act === 'offrm') { var who = t.getAttribute('data-st'), bl0 = blocksOf(who), gone = bl0[+id]; O.undo = { who: who, prev: bl0.slice() }; if (gone) O.offMsg = 'Removed: ' + (isAllDay(gone) ? 'day off' : 'time off ' + offWhen(gone)) + ' on ' + dshort(gone.d) + '.'; bl0.splice(+id, 1); SH = null; DB.setNote('block:' + who, JSON.stringify(bl0)).then(refresh).then(function () { keepScroll(function () { render(false); }); }); return; }
+    if (act === 'openoff') { SH = { off: true, st: t.getAttribute('data-st'), key: id }; renderSheet(); return; }
+    if (act === 'shclose') { var o = SH; SH = null; confirmId = null; renderSheet(); refocus(o); catchUp(); return; }
+    if (act === 'offundo') { var u = O.undo; if (!u || u.who !== O.who) return; /* audit S6 */ O.undo = null;
+      DB.editBlocks(u.who, function (cur) {   // fix3: put back exactly what this window changed, on the latest copy; if another window changed it since, change nothing
+        var i = -1, ok; if (u.made) cur.forEach(function (x, n) { if (i < 0 && sameBlock(x, u.made)) i = n; });
+        ok = u.made ? i >= 0 : !cur.some(function (x) { return x.d === u.gone.d && x.a < u.gone.b && x.b > u.gone.a; });
+        if (ok && u.made) { cur.splice(i, 1); cur = cur.concat(u.was); } else if (ok) cur.push(u.gone);
+        return { list: cur, out: ok };
+      }).then(function (ok) { O.offMsg = ok ? 'Undone.' : CHANGED.replace('nothing was changed', 'Undo did nothing'); }).then(refresh).then(function () { keepScroll(function () { render(false); }); }); return; }
+    if (act === 'offrm') { var who = t.getAttribute('data-st'), gone = bparse(id), o0 = SH; O.undo = null; SH = null; confirmId = null; renderSheet(); /* fix3: sheet closed and page released first */ if (!gone) { refocus(o0); return; } O.offMsg = 'Removed: ' + (isAllDay(gone) ? 'day off' : 'time off ' + offWhen(gone)) + ' on ' + dshort(gone.d) + '.'; removeBlock(who, gone).then(refresh).then(function () { keepScroll(function () { render(false); focusAct('offundo'); }); }); return; }
     if (act === 'offcancel') { O.offWarn = null; O.offMsg = ''; render(false); return; }
     if (act === 'offfree') {                          // keep only the free stretches between the appointments
       var w = O.offWarn; if (!w) return; var segs = [], c0 = w.a;
       w.hits.slice().sort(function (p1, p2) { return p1.time - p2.time; }).forEach(function (x) { if (x.time > c0) segs.push([c0, Math.min(x.time, w.b)]); c0 = Math.max(c0, x.time + x.dur); });
       if (c0 < w.b) segs.push([c0, w.b]);
       segs = segs.filter(function (g) { return g[1] > g[0]; });
-      var bl1 = blocksOf(O.who); segs.forEach(function (g) { bl1.push({ d: w.d, a: g[0], b: g[1] }); });
+      var add1 = segs.map(function (g) { return { d: w.d, a: g[0], b: g[1] }; });
       O.offMsg = segs.length ? 'Blocked ' + segs.map(function (g) { return tfmt(g[0]) + ' to ' + tfmt(g[1]); }).join(' and ') + ' on ' + dshort(w.d) + '. The appointment stays as it is.' : 'There is no free time between ' + tfmt(w.a) + ' and ' + tfmt(w.b) + ' on ' + dshort(w.d) + ', so nothing was blocked.';
-      O.offWarn = null; DB.setNote('block:' + O.who, JSON.stringify(bl1)).then(refresh).then(function () { render(false); }); return;
+      O.offWarn = null; DB.editBlocks(O.who, function (cur) { return { list: cur.concat(add1) }; }).then(refresh).then(function () { render(false); }); return;
     }
     if (act === 'grp') { B.grp = id; B.open = null; go('svc'); }
     else if (act === 'svc') chooseService(id);
-    else if (act === 'more') { B.open = id; keepScroll(function () { render(false); }); }
-    else if (act === 'less') { B.open = null; keepScroll(function () { render(false); }); }
+    else if (act === 'more') { B.open = id; keepScroll(function () { render(false); focusAct('less'); }); }
+    else if (act === 'less') { var was = B.open; B.open = null; keepScroll(function () { render(false); focusAct('more', was); }); }
     else if (act === 'who') { B.who = id; B.date = null; B.time = null; go('when'); }
-    else if (act === 'day') { B.date = id; B.time = null; keepScroll(function () { render(false); }); }
-    else if (act === 'time') { B.time = +id; keepScroll(function () { render(false); }); }
+    else if (act === 'day') { B.date = id; B.time = null; keepScroll(function () { render(false); focusAct('day', id); }); }
+    else if (act === 'time') { B.time = +id; keepScroll(function () { render(false); focusAct('time', id); }); }
     else if (act === 'toyou') { if (B.patch && !B.patchPick) return; go('you'); }
     else if (act === 'back') {
       if (B.step === 'svc') go('cat');
       else if (B.step === 'who') { B.q ? go('cat') : go('svc'); }
-      else if (B.step === 'when') { if (B.moving) { B.moving = null; mode = 'mine'; render(true); } else if (svc().staff.length > 1 && !B.with) go('who'); else { B.q ? go('cat') : go('svc'); } }
+      else if (B.step === 'when') { if (B.moving) { B.moving = null; mode = B.moveFrom === 'owner' ? 'owner' : 'mine'; B.moveFrom = null; render(true); } else if (svc().staff.length > 1 && !B.with) go('who'); else { B.q ? go('cat') : go('svc'); } }
       else if (B.step === 'you') go('when');
     }
     else if (act === 'tomine') { mode = 'mine'; render(true); }
-    else if (act === 'again') { mode = 'book'; B.sid = null; B.q = ''; B.done = null; B.moving = null; B.with = null; B.form.notes = ''; go('cat'); }
+    else if (act === 'again') { mode = 'book'; B.moveFrom = null; B.sid = null; B.q = ''; B.done = null; B.moving = null; B.with = null; B.form.notes = ''; go('cat'); }
     else if (act === 'withoff') { B.with = null; B.q = ''; go('cat'); }
     else if (act === 'cancel') { confirmId = id; render(false); }
     else if (act === 'cancelno') { confirmId = null; render(false); }
-    else if (mode !== 'owner' && /^(movestart|move|cancelyes)$/.test(act) && (function () {   // audit S6
+    else if (mode !== 'owner' && !(act === 'move' && B.moveFrom === 'owner') && /^(movestart|move|cancelyes)$/.test(act) && (function () {   // audit S4: a move started by staff is not a customer change   // audit S6
       var tid = act === 'move' ? B.moving : id, o = C.bookings.filter(function (b) { return b.id === tid; })[0];
-      return !o || o.status === 'cancelled' || stamp(o.date, o.time) - Date.now() < CHANGE_HOURS * 3600e3; })()) { SH = null; confirmId = null; B.moving = null; mode = 'mine'; render(true); }
+      return !o || o.status === 'cancelled' || stamp(o.date, o.time) - Date.now() < CHANGE_HOURS * 3600e3; })()) { SH = null; confirmId = null; B.moving = null; B.moveFrom = null; mode = 'mine'; render(true); }
     else if (act === 'cancelyes') { confirmId = null; DB.patchBooking(id, { status: 'cancelled' }).then(refresh).then(function () { render(false); }); }
-    else if (act === 'movestart') { SH = null; var b = C.bookings.filter(function (x) { return x.id === id; })[0]; if (!b) return; mode = 'book'; B.sid = b.sid; B.who = b.staff; B.date = b.date; B.time = null; B.patch = false; B.moving = id; go('when'); }
+    else if (act === 'movestart') { SH = null; var b = C.bookings.filter(function (x) { return x.id === id; })[0]; if (!b) return; B.moveFrom = mode; mode = 'book'; B.sid = b.sid; B.who = b.staff; B.date = b.date; B.time = null; B.patch = false; B.patchPick = null; B.moving = id; go('when'); }
     else if (act === 'move') { var who = B.who === 'any' ? pickStaff() : B.who, mb = C.bookings.filter(function (x) { return x.id === B.moving; })[0], ms = svc();
       if (!who || !mb || !freeFor(B.date, who, B.time, ms.mins, B.moving) || stamp(B.date, B.time) < minStampFor(false) || (mb.patch && stamp(B.date, B.time) < stamp(mb.patch.date, mb.patch.time) + PATCH_HOURS * 3600e3)) { B.err = mb && mb.patch ? 'That time is too soon after the patch test, or has just gone. Please pick another.' : 'That time has just gone. Please pick another.'; var e0 = B.err; B.time = null; go('when', e0); return; }
-      DB.patchBooking(B.moving, { date: B.date, time: B.time, staff: who }).then(refresh).then(function () { B.moving = null; mode = 'mine'; render(true); }); }
-    else if (act === 'ologin') { O.who = id; O.tab = id === 'owner' ? 'dash' : 'cal'; O.cal = 'day'; render(true); }
-    else if (act === 'ologout') { O.who = null; render(true); }
-    else if (act === 'odep') { DB.setNote('set:deposit', id).then(refresh).then(function () { keepScroll(function () { render(false); }); }); }
-    else if (act === 'ocal') { O.cal = id; keepScroll(function () { render(false); }); }
-    else if (act === 'offdel') { var bl = blocksOf(O.who), gone2 = bl[+id]; O.undo = { who: O.who, prev: bl.slice() }; if (gone2) O.offMsg = 'Removed: ' + (isAllDay(gone2) ? 'day off' : 'time off ' + offWhen(gone2)) + ' on ' + dshort(gone2.d) + '.'; bl.splice(+id, 1); DB.setNote('block:' + O.who, JSON.stringify(bl)).then(refresh).then(function () { render(false); }); }
-    else if (act === 'otab') { O.tab = id; O.offMsg = ''; O.undo = null; O.offWarn = null; render(false); }
-    else if (act === 'oday') { var d = addDays(dparse(ownerDay()), +id); O.day = dkey(d); render(false); }
+      DB.patchBooking(B.moving, { date: B.date, time: B.time, staff: who }).then(refresh).then(function () { B.moving = null; mode = B.moveFrom === 'owner' ? 'owner' : 'mine'; B.moveFrom = null; render(true); }); }
+    else if (act === 'ologin') { O.who = id; O.tab = id === 'owner' ? 'dash' : 'cal'; O.cal = 'day'; O.undo = null; O.offMsg = ''; O.offWarn = null; render(true); }   // audit S6
+    else if (act === 'ologout') { O.who = null; O.undo = null; O.offMsg = ''; O.offWarn = null; render(true); }
+    else if (act === 'odep') { DB.setNote('set:deposit', id).then(refresh).then(function () { keepScroll(function () { render(false); focusAct('odep', id); }); }); }
+    else if (act === 'ocal') { O.cal = id; keepScroll(function () { render(false); focusAct('ocal', id); }); }
+    else if (act === 'offdel') { var gone2 = bparse(id); O.undo = null; if (!gone2) return; O.offMsg = 'Removed: ' + (isAllDay(gone2) ? 'day off' : 'time off ' + offWhen(gone2)) + ' on ' + dshort(gone2.d) + '.'; removeBlock(O.who, gone2).then(refresh).then(function () { keepScroll(function () { render(false); focusAct('offundo'); }); }); }
+    else if (act === 'otab') { O.tab = id; O.offMsg = ''; O.undo = null; O.offWarn = null; render(false); focusAct('otab', id); }
+    else if (act === 'oday') { var d = addDays(dparse(ownerDay()), +id); O.day = dkey(d); render(false); focusAct('oday', id); }
     else if (act === 'mark') { var v = t.getAttribute('data-v'), cur = C.marks[id]; DB.setMark(id, cur === v ? null : v).then(refresh).then(function () { keepScroll(function () { render(false); }); }); }
-    else if (act === 'enqdone') { var se = id.indexOf('se') === 0; (se ? DB.setMark(id, C.marks[id] === 'done' ? null : 'done') : DB.patchEnquiry(id, { done: !C.enquiries.filter(function (x) { return x.id === id; })[0].done })).then(refresh).then(function () { render(false); }); }
+    else if (act === 'enqdone') { var se = id.indexOf('se') === 0; (se ? DB.setMark(id, C.marks[id] === 'done' ? null : 'done') : DB.patchEnquiry(id, { done: !C.enquiries.filter(function (x) { return x.id === id; })[0].done })).then(refresh).then(function () { keepScroll(function () { render(false); focusAct('enqdone', id); }); }); }
   });
   shroot.addEventListener('click', onAct);
+  function focusAct(act, id) { var el = $('[data-act="' + act + '"]' + (id != null ? '[data-id="' + id + '"]' : ''), app) || $('h3', app); if (el) try { el.focus({ preventScroll: true }); } catch (e) { } }   // audit S10
   function keepScroll(fn) { var y = window.pageYOffset, dz = $('.days', app), x = dz ? dz.scrollLeft : 0; fn(); var d2 = $('.days', app); if (d2) d2.scrollLeft = x; scrollTo(0, y); }
   app.addEventListener('change', function (e) {
     var t = e.target, act = t.getAttribute('data-act');
-    if (act === 'patch') { B.patch = t.checked; B.time = null; B.patchPick = null; keepScroll(function () { render(false); }); }
+    if (act === 'patch') { B.patch = t.checked; B.time = null; B.patchPick = null; keepScroll(function () { render(false); var p = $('input[data-act="patch"]', app); if (p) try { p.focus({ preventScroll: true }); } catch (e2) { } }); }
     else if (act === 'patchpick') { B.patchPick = patchOptions()[+t.value] || null; }
   });
   app.addEventListener('input', function (e) {
     var t = e.target;
     if (t.id === 'bq') { B.q = t.value; $('#blist', app).innerHTML = listHTML(); }
-    else if (t.id === 'oq') { O.q = t.value; render(false); var q = $('#oq', app); q.focus(); try { q.setSelectionRange(q.value.length, q.value.length); } catch (er) { } }
+    else if (t.id === 'oq') { var s0 = t.selectionStart, s1 = t.selectionEnd; O.q = t.value; render(false); var q = $('#oq', app); q.focus(); try { q.setSelectionRange(s0, s1); } catch (er) { } }   // audit S10: caret stays where it was
     else if (t.getAttribute('data-note')) DB.setNote(t.getAttribute('data-note'), t.value).then(function () { C.notes[t.getAttribute('data-note')] = t.value; });
     else if (t.form && t.form.id === 'bform') { B.form[t.name] = t.type === 'checkbox' ? t.checked : t.value; }
   });
   app.addEventListener('submit', function (e) {
     if (e.target.id !== 'bform') return; e.preventDefault();
-    var f = B.form, s = svc(), digits = f.phone.replace(/[^\d+]/g, '');
+    var f = B.form, s = svc(), perr = mobileErr(f.phone.trim());
     if (f.name.trim().length < 2) B.err = 'Please add your name.';
-    else if (!/^(\+44|0)\d{9,10}$/.test(digits)) B.err = 'Please add a UK mobile number, for example 07700 900123.';
+    else if (perr) B.err = perr;
     else if (f.email && !/^\S+@\S+\.\S+$/.test(f.email)) B.err = 'That email does not look right.';
     else if (s.cat === 'Ear Piercing' && /piercing/i.test(s.name) && !f.age) B.err = 'Please tick the age line: no under 16s for ear piercing.';
     else B.err = '';
@@ -3095,11 +3243,11 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     if (!isOpen(B.date) || stamp(B.date, B.time) < minStampFor(B.patch) || !freeFor(B.date, who, B.time, s.mins)) { B.time = null; go('when', 'That time has just gone. Please pick another.'); return; }
     var pk = B.patchPick;   // audit S5: recheck the patch test's notice and 48 h gap, not only that it is free
     if (B.patch && (!pk || !isOpen(pk.k) || stamp(pk.k, pk.t) < Date.now() + 3600e3 || stamp(B.date, B.time) - stamp(pk.k, pk.t) < PATCH_HOURS * 3600e3 || !freeFor(pk.k, pk.staff, pk.t, 5))) { B.patchPick = null; go('when', 'Please choose a new patch test time.'); return; }
-    var b = { id: 'b' + Date.now().toString(36), ref: newRef(), sid: s.id, staff: who, date: B.date, time: B.time, dur: s.mins, name: f.name.trim(), phone: f.phone.trim(), email: f.email.trim(), notes: f.notes.trim(), status: 'booked', created: Date.now(), source: 'website',
+    var b = { id: 'b' + Date.now().toString(36), ref: newRef(), sid: s.id, staff: who, date: B.date, time: B.time, dur: s.mins, name: f.name.trim(), phone: pfmt(pkey(f.phone)), email: f.email.trim(), notes: f.notes.trim(), status: 'booked', created: Date.now(), source: 'website',
       patch: B.patch && B.patchPick ? { date: B.patchPick.k, time: B.patchPick.t, staff: B.patchPick.staff } : null };
     DB.addBooking(b).then(refresh).then(function () { B.done = b; B.form.notes = ''; B.form.age = false; if (RLR.ping) RLR.ping(true); go('done'); });
   });
-  $$('.mode').forEach(function (m) { m.addEventListener('click', function () { mode = m.getAttribute('data-mode'); if (mode === 'book' && B.step === 'done') { B.step = 'cat'; B.sid = null; } confirmId = null; render(true); }); });
+  $$('.mode').forEach(function (m) { m.addEventListener('click', function () { mode = m.getAttribute('data-mode'); if (B.moving) { B.moving = null; B.moveFrom = null; if (mode === 'book') B.step = 'cat'; } if (mode === 'book' && B.step === 'done') { B.step = 'cat'; B.sid = null; } confirmId = null; render(true); }); });
 
   /* enquiries + reset */
   var ef = $('#enqForm'), eo = $('#enqOut');
@@ -3108,13 +3256,13 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     var n = ef.elements.name.value.trim(), c = ef.elements.contact.value.trim();
     if (n.length < 2 || c.length < 5) { eo.textContent = 'Please add your name and a mobile or email.'; return; }
     DB.addEnquiry({ id: 'e' + Date.now().toString(36), name: n, contact: c, kind: ef.elements.kind.value, msg: ef.elements.msg.value.trim(), at: Date.now(), done: false }).then(refresh).then(function () {
-      ef.reset(); eo.textContent = 'Saved in this demo. Open Staff login, choose Owner, then Enquiries.'; if (mode === 'owner') render(false);
+      ef.reset(); eo.textContent = DB.saving() ? 'Saved in this demo. Open Staff login, choose Owner, then Enquiries.' : 'Kept for this visit only: this browser is not saving the demo. Open Staff login, choose Owner, then Enquiries.'; if (mode === 'owner') render(false);
     });
   });
-  var rs = $('#resetDemo'); if (rs) rs.addEventListener('click', function () { DB.reset().then(refresh).then(function () { B.step = 'cat'; B.sid = null; B.done = null; mode = 'book';
+  var rs = $('#resetDemo'); if (rs) rs.addEventListener('click', function () { var kept = true; DB.reset().then(function (ok) { kept = ok; }).then(refresh).then(function () { B.step = 'cat'; B.sid = null; B.done = null; mode = 'book';
       B.form = { name: '', phone: '', email: '', notes: '', age: false }; B.with = null; B.q = ''; B.grp = null; B.moving = null; B.date = null; B.time = null; B.patch = false; B.patchPick = null; B.err = ''; B.open = null;
-      O.who = null; O.q = ''; O.day = null; O.offWarn = null; O.offMsg = ''; SH = null; confirmId = null;
-      var ef2 = $('#enqForm'), eo2 = $('#enqOut'); if (ef2) ef2.reset(); if (eo2) eo2.textContent = ''; render(false); rs.textContent = 'Demo reset'; setTimeout(function () { rs.textContent = 'Reset demo'; }, 1600); }); });
+      O.who = null; O.q = ''; O.day = null; O.offWarn = null; O.offMsg = ''; O.undo = null; SH = null; confirmId = null; B.moveFrom = null;
+      var ef2 = $('#enqForm'), eo2 = $('#enqOut'); if (ef2) ef2.reset(); if (eo2) eo2.textContent = ''; render(false); rs.textContent = kept ? 'Demo reset' : 'Reset for this visit only'; setTimeout(function () { rs.textContent = 'Reset demo'; }, 1600); }); });
 
   refresh().then(function () { render(false); });
 })();
@@ -3131,8 +3279,8 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   var $ = function (s, r) { return (r || D).querySelector(s); };
   var box = $('.tv__box', tv), h = $('#tv-h', tv), media = $('.tv__media', tv), poster = $('.tv__poster', tv), vid = $('.tv__vid', tv),
     stepsEl = $('.tv__steps', tv), say = $('.tv__say', tv), facts = $('.tv__facts', tv), src = $('.tv__src', tv), quick = $('.tv__quick', tv), bookBtn = $('[data-tvbook]', tv);
-  var RM = false; try { RM = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { }
-  var cur = null, active = -1, lastFocus = null, closeT = 0, chosen = false, playTok = 0, focusT = 0, paused = false;
+  var RM = false, MQ = null; try { MQ = matchMedia('(prefers-reduced-motion: reduce)'); RM = MQ.matches; } catch (e) { }
+  var cur = null, active = -1, lastFocus = null, chosen = false, playTok = 0, focusT = 0, openFrame = 0;
   var pauseBtn = $('.tv__pause', tv);
   var BG = ['#main', '.top', '.bar', '.skip'];
   function inert(on) { BG.forEach(function (s) { var el = $(s); if (el) { if (on) el.setAttribute('inert', ''); else el.removeAttribute('inert'); } }); }   // audit S13
@@ -3141,7 +3289,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   function money(v) { return '£' + (v % 1 ? v.toFixed(2) : v); }
   function photoFor(slug) { var im = $('.tcat[data-g="' + slug + '"] .tcat__ph'); return im ? im.getAttribute('src') : ''; }
   function timeTxt(kd) { return kd.tmin === kd.tmax ? dur(kd.tmin) : dur(kd.tmin) + ' to ' + dur(kd.tmax); }
-  function priceTxt(kd) { return kd.from != null ? 'From ' + money(kd.from) : kd.varies ? 'Varies by piece' : 'On consultation'; }
+  function priceTxt(kd) { return kd.from != null ? 'Category prices from ' + money(kd.from) : kd.varies ? 'Category prices vary' : 'See each treatment\u2019s price'; }   // audit N2: a category figure, not this illustration's price
   function whoTxt(kd, i) { var w = kd.swho && kd.swho[i]; return (w && w.length ? w : kd.who).join(', '); }
   function play(url, posterUrl, at) {                  // one <video>: swap its source only when a step needs a different clip
     if (RM || !url) return;
@@ -3150,16 +3298,18 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
       vid.src = url; vid.load(); media.classList.remove('playing');
       vid.onloadedmetadata = function () { vid.onloadedmetadata = null; try { vid.currentTime = at || 0; } catch (e) { } };   // audit S11: one handler, replaced
     } else if (at != null) { try { vid.currentTime = Math.min((vid.duration || 99) - 0.05, at); } catch (e) { } }
-    var tok = ++playTok; paused = false; pauseBtn.setAttribute('aria-pressed', 'false');
-    vid.play().then(function () { if (tok === playTok) media.classList.add('playing'); }).catch(function () { if (tok === playTok) media.classList.remove('playing'); });
+    var tok = ++playTok;
+    vid.play().then(function () { if (tok === playTok) media.classList.add('playing'); syncPause(); }).catch(function () { if (tok === playTok) media.classList.remove('playing'); syncPause(); });
   }
+  function syncPause() { if (!pauseBtn) return; var p = vid.paused; pauseBtn.setAttribute('aria-pressed', p ? 'true' : 'false'); pauseBtn.setAttribute('aria-label', p ? 'Play the clip' : 'Pause the clip'); }   // audit S12
+  function stopClip() { playTok++; vid.onloadedmetadata = null; try { vid.pause(); } catch (e) { } vid.removeAttribute('src'); try { vid.load(); } catch (e) { } media.classList.remove('playing'); }
   function mark(i) {
     active = i;
     Array.prototype.forEach.call(stepsEl.children, function (li, k) { li.firstChild.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
     say.textContent = cur.steps[i];
     var sb = stepsEl.children[i]; if (sb) { stepsEl.style.setProperty('--my', sb.offsetTop + 'px'); stepsEl.style.setProperty('--mh', sb.offsetHeight + 'px'); }   // gliding gold marker
     var all = []; (cur.swho && cur.swho.every(function (w) { return w && w.length; }) ? cur.swho : [cur.who]).forEach(function (w) { w.forEach(function (n) { if (all.indexOf(n) < 0) all.push(n); }); });
-    quick.innerHTML = '<span>' + priceTxt(cur) + '</span><span>' + timeTxt(cur) + '</span><span>' + esc(all.join(', ')) + '</span>';
+    quick.innerHTML = '<span>' + priceTxt(cur) + '</span><span>Category ' + timeTxt(cur) + '</span><span>These steps: ' + esc(all.join(', ')) + '</span>';
   }
   function setStep(i, byUser) {
     if (!cur || i < 0 || i >= cur.steps.length) return;
@@ -3173,7 +3323,7 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function open(slug, from, step, who) {
     var kd = K[slug]; if (!kd) return;
-    clearTimeout(closeT);
+    cancelAnimationFrame(openFrame);
     cur = kd; cur.slug = slug; active = -1; chosen = false; lastFocus = from || D.activeElement;
     h.textContent = kd.label;
     var still = kd.poster || photoFor(slug);
@@ -3181,13 +3331,13 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
     media.classList.remove('playing');
     stepsEl.innerHTML = kd.steps.map(function (t, i) { return '<li><button type="button" data-step="' + i + '" aria-pressed="false"><b>' + (i + 1) + '</b><span>' + esc(t) + '</span></button></li>'; }).join('');
     var whoAll = kd.whoBy ? kd.whoBy.map(function (x) { return esc(x[0]) + ': ' + esc(x[1].join(', ')); }).join('<br>') : esc(kd.who.join(', '));
-    facts.innerHTML = '<div><dt>Time</dt><dd>' + timeTxt(kd) + '</dd></div><div><dt>Price</dt><dd>' + priceTxt(kd) + '</dd></div>' +
+    facts.innerHTML = '<div><dt>Time (whole category)</dt><dd>' + timeTxt(kd) + '</dd></div><div><dt>Price (whole category)</dt><dd>' + priceTxt(kd) + '</dd></div>' +
       '<div class="tv__who"><dt>Who does what</dt><dd>' + whoAll + '</dd></div><div><dt>On the menu</dt><dd>' + kd.n + (kd.n === 1 ? ' treatment' : ' treatments') + '</dd></div>';
     var seen = []; kd.src.join(' / ').split(' / ').forEach(function (x) { x = x.trim(); if (x && seen.indexOf(x) < 0) seen.push(x); });
     src.textContent = 'Steps from RLR Beauty’s own treatment descriptions (' + seen.join('; ') + ').';
     bookBtn.textContent = 'Book now'; bookBtn.setAttribute('aria-label', 'Book now: ' + kd.label);
     tv.hidden = false; D.documentElement.classList.add('tv-open'); box.scrollTop = 0;
-    requestAnimationFrame(function () { tv.classList.add('on'); });
+    openFrame = requestAnimationFrame(function () { openFrame = 0; tv.classList.add('on'); });
     vid.removeAttribute('src');
     var pick = step != null ? +step : -1;
     var byWho = false;
@@ -3199,20 +3349,21 @@ html.rv h2[data-rv].in{clip-path:inset(-.3em -.3em -.3em -.3em)!important}
   }
   function close() {
     if (tv.hidden) return;
-    tv.classList.remove('on'); D.documentElement.classList.remove('tv-open'); inert(false); clearTimeout(focusT); playTok++; vid.onloadedmetadata = null;
-    try { vid.pause(); } catch (e) { }
-    vid.removeAttribute('src'); try { vid.load(); } catch (e) { }   // frees the decoder: only one clip ever decodes
-    media.classList.remove('playing');
-    closeT = setTimeout(function () { tv.hidden = true; }, 220);
+    cancelAnimationFrame(openFrame); openFrame = 0;   // audit S11: closes at once, nothing left queued
+    tv.classList.remove('on'); tv.hidden = true; D.documentElement.classList.remove('tv-open'); inert(false); clearTimeout(focusT);
+    stopClip();   // frees the decoder: only one clip ever decodes
     if (lastFocus && lastFocus.focus) try { lastFocus.focus({ preventScroll: true }); } catch (e) { }
+    if (RLR.catchUp) RLR.catchUp();   // fix2: changes from another tab are shown once the viewer is closed
   }
-  vid.addEventListener('playing', function () { media.classList.add('playing'); });
+  vid.addEventListener('playing', function () { media.classList.add('playing'); syncPause(); });
+  vid.addEventListener('pause', syncPause);
+  function motionChanged(e) { RM = e.matches; if (RM) stopClip(); }   // audit S13: Reduce Motion switched on mid-visit stops the clip
+  if (MQ) { if (MQ.addEventListener) MQ.addEventListener('change', motionChanged); else if (MQ.addListener) MQ.addListener(motionChanged); }
   vid.addEventListener('error', function () { media.classList.remove('playing'); vid.onloadedmetadata = null; vid.removeAttribute('src'); });   // poster + steps stay
   D.addEventListener('visibilitychange', function () { if (D.hidden) try { vid.pause(); } catch (e) { } });   // audit S19
   if (pauseBtn) pauseBtn.addEventListener('click', function () {                                       // audit S19: pause / play the loop
     if (!vid.getAttribute('src')) return;
-    paused = !paused; pauseBtn.setAttribute('aria-pressed', paused ? 'true' : 'false'); pauseBtn.setAttribute('aria-label', paused ? 'Play the clip' : 'Pause the clip');
-    if (paused) vid.pause(); else vid.play().catch(function () { });
+    if (vid.paused) vid.play().catch(function () { syncPause(); }); else vid.pause();
   });
   vid.addEventListener('timeupdate', function () {    // before any tap, the highlight follows the clip across the steps it shows
     if (!cur || chosen || !cur.t || vid.getAttribute('src') !== cur.video) return;
